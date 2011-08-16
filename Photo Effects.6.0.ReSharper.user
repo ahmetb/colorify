@@ -1,0 +1,481 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:App.xaml" caret="0" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:Extras.xml" caret="0" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/d:Properties/f:AssemblyInfo.cs" caret="965" fromTop="21" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/d:Properties/f:WMAppManifest.xml" caret="1484" fromTop="29" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/d:Properties/f:AppManifest.xml" caret="187" fromTop="4" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:App.xaml.cs" caret="426" fromTop="15" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:TwitpicClient.cs" caret="4193" fromTop="25" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="8784" fromTop="29" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:MainPage.xaml.cs" caret="7184" fromTop="24" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:MainPage.xaml" caret="1749" fromTop="31" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml" caret="1465" fromTop="23" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3875" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="5563" fromTop="32" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="5947" fromTop="41" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="5345" fromTop="25" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="5306" fromTop="29" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="12122" fromTop="32" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="7880" fromTop="27" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:SharePage.xaml.cs" caret="8784" fromTop="29" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:MainPage.xaml.cs" caret="772" fromTop="10" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:MainPage.xaml.cs" caret="6960" fromTop="36" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:MainPage.xaml.cs" caret="2192" fromTop="35" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="2721" fromTop="32" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3006" fromTop="26" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3545" fromTop="7" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="4104" fromTop="22" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="5646" fromTop="37" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="5477" fromTop="33" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="5115" fromTop="21" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="4916" fromTop="16" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3445" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="7182" fromTop="37" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="6649" fromTop="22" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="5806" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3599" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3089" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3290" fromTop="5" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3006" fromTop="0" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="2361" fromTop="21" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="1904" fromTop="14" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="4315" fromTop="25" />
+      <File id="D46396F7-7697-4C92-9725-AC050A22F3C5/f:ImageManipulator.cs" caret="3837" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Tasks.PhotoChooserTask">
+      <Item value="ShowCamera" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="true" priority="351" />
+      <Item value="Math`0" priority="63" />
+      <Item value="if" priority="959" />
+      <Item value="xi" priority="127" />
+      <Item value="yi" priority="95" />
+      <Item value="cRadius" priority="31" />
+      <Item value="center" priority="31" />
+      <Item value="src" priority="31" />
+      <Item value="else" priority="319" />
+      <Item value="break" priority="351" />
+      <Item value="yClick" priority="31" />
+      <Item value="finalImage" priority="159" />
+      <Item value="image" priority="383" />
+      <Item value="imageMan" priority="309" />
+      <Item value="ContentPanel" priority="159" />
+      <Item value="null" priority="479" />
+      <Item value="return" priority="351" />
+      <Item value="ShareStatusTask`0" priority="63" />
+      <Item value="new" priority="512" />
+      <Item value="ShareStatusTask" priority="28" />
+      <Item value="ShareTaskBase`0" priority="31" />
+      <Item value="ImageManipulator" priority="28" />
+      <Item value="helper" priority="31" />
+      <Item value="this" priority="127" />
+      <Item value="Visible" priority="50" />
+      <Item value="e" priority="383" />
+      <Item value="brushpreview" priority="58" />
+      <Item value="brushPanel" priority="31" />
+      <Item value="const" priority="63" />
+      <Item value="int" priority="255" />
+      <Item value="do" priority="31" />
+      <Item value="MaxRadius" priority="159" />
+      <Item value="brushslider" priority="63" />
+      <Item value="radius" priority="63" />
+      <Item value="double" priority="31" />
+      <Item value="continue" priority="31" />
+      <Item value="public" priority="126" />
+      <Item value="class" priority="30" />
+      <Item value="Brush`0" priority="31" />
+      <Item value="Brush" priority="28" />
+      <Item value="CornerRadius`0" priority="63" />
+      <Item value="Setter`0" priority="31" />
+      <Item value="CannotUnloadAppDomainException`0" priority="31" />
+      <Item value="value" priority="63" />
+      <Item value="size" priority="31" />
+      <Item value="xs" priority="31" />
+      <Item value="sx" priority="63" />
+      <Item value="xe" priority="31" />
+      <Item value="string" priority="543" />
+      <Item value="filename" priority="187" />
+      <Item value="index" priority="127" />
+      <Item value="fileName" priority="95" />
+      <Item value="while" priority="31" />
+      <Item value="prefix" priority="31" />
+      <Item value="extension" priority="31" />
+      <Item value="Length" priority="161" />
+      <Item value="sizeof" priority="31" />
+      <Item value="try" priority="127" />
+      <Item value="ex" priority="95" />
+      <Item value="sender" priority="223" />
+      <Item value="RoutedPropertyChangedEventArgs&lt;double&gt;" priority="28" />
+      <Item value="brush" priority="63" />
+      <Item value="saveFilename" priority="31" />
+      <Item value="false" priority="351" />
+      <Item value="MessageBox`0" priority="31" />
+      <Item value="Uri" priority="28" />
+      <Item value="UriKind`0" priority="31" />
+      <Item value="Microsoft" priority="31" />
+      <Item value="Phone" priority="26" />
+      <Item value="Tasks" priority="26" />
+      <Item value="MarketplaceReviewTask`0" priority="26" />
+      <Item value="marketplaceReview" priority="32" />
+      <Item value="MarketplaceReviewTask" priority="28" />
+      <Item value="titleBar" priority="154" />
+      <Item value="switch" priority="63" />
+      <Item value="case" priority="223" />
+      <Item value="private" priority="191" />
+      <Item value="void" priority="63" />
+      <Item value="using" priority="62" />
+      <Item value="System" priority="62" />
+      <Item value="Windows" priority="26" />
+      <Item value="enum" priority="31" />
+      <Item value="SocialNetwork`0" priority="95" />
+      <Item value="target" priority="159" />
+      <Item value="FACEBOOK" priority="67" />
+      <Item value="TitlePanel" priority="63" />
+      <Item value="readonly" priority="63" />
+      <Item value="byte" priority="124" />
+      <Item value="FileStream" priority="28" />
+      <Item value="FileMode`0" priority="31" />
+      <Item value="IFormattable`0" priority="31" />
+      <Item value="fs" priority="127" />
+      <Item value="ReadLocalValue`0" priority="63" />
+      <Item value="TextChangedEventArgs`0" priority="31" />
+      <Item value="textChanged" priority="31" />
+      <Item value="Title" priority="63" />
+      <Item value="MediaLibrary" priority="28" />
+      <Item value="media" priority="31" />
+      <Item value="File`0" priority="63" />
+      <Item value="picture" priority="95" />
+      <Item value="imageStream" priority="31" />
+      <Item value="Guid`0" priority="63" />
+      <Item value="NotFiniteNumberException`0" priority="31" />
+      <Item value="lastSavedGuid" priority="31" />
+      <Item value="guid" priority="31" />
+      <Item value="savedPicture" priority="63" />
+      <Item value="Picture`0" priority="31" />
+      <Item value="shareText" priority="63" />
+      <Item value="titleBar_MouseLeftButtonUp`0" priority="31" />
+      <Item value="default" priority="31" />
+      <Item value="NONE" priority="16" />
+      <Item value="EMAIL" priority="33" />
+      <Item value="EmailComposeTask" priority="28" />
+      <Item value="emailTask" priority="95" />
+      <Item value="loading" priority="127" />
+      <Item value="object" priority="31" />
+      <Item value="EventArgs`0" priority="31" />
+      <Item value="TWITTER" priority="33" />
+      <Item value="twitterGrid" priority="63" />
+      <Item value="Collapsed" priority="33" />
+      <Item value="twitterUsername" priority="90" />
+      <Item value="frmTwitterUsername" priority="95" />
+      <Item value="frmTwitterPassword" priority="31" />
+      <Item value="twitterPassword" priority="63" />
+      <Item value="contents" priority="159" />
+      <Item value="Buffer`0" priority="31" />
+      <Item value="binaryImageData" priority="127" />
+      <Item value="request" priority="154" />
+      <Item value="IAsyncResult`0" priority="33" />
+      <Item value="result" priority="95" />
+      <Item value="requestStream" priority="31" />
+      <Item value="var" priority="31" />
+      <Item value="HttpWebResponse`0" priority="63" />
+      <Item value="respresult" priority="63" />
+      <Item value="resp" priority="159" />
+      <Item value="Created" priority="16" />
+      <Item value="OK" priority="16" />
+      <Item value="TwitpicClient`0" priority="31" />
+      <Item value="twitpic" priority="96" />
+      <Item value="TwitpicClient" priority="28" />
+      <Item value="GetLastSavedPictureContents`0" priority="31" />
+      <Item value="text" priority="31" />
+      <Item value="tweetMessage" priority="31" />
+      <Item value="uploaded" priority="31" />
+      <Item value="Thread" priority="28" />
+      <Item value="ThreadStart`0" priority="31" />
+      <Item value="threadStart" priority="32" />
+      <Item value="ThreadStart" priority="28" />
+      <Item value="Dispatcher" priority="31" />
+      <Item value="bool" priority="95" />
+      <Item value="throw" priority="31" />
+      <Item value="as" priority="31" />
+      <Item value="ApplicationBarIconButton`0" priority="59" />
+      <Item value="event" priority="31" />
+      <Item value="network" priority="32" />
+      <Item value="warning" priority="31" />
+      <Item value="ApplicationBarIconLoadButton_Click`0" priority="26" />
+      <Item value="browserAuth" priority="31" />
+      <Item value="Array`0" priority="31" />
+      <Item value="grayImage" priority="95" />
+      <Item value="modified" priority="31" />
+      <Item value="finally" priority="31" />
+      <Item value="ThreadStaticAttribute`0" priority="31" />
+      <Item value="response" priority="31" />
+      <Item value="ApplicationBarOkButton_Click`0" priority="31" />
+      <Item value="TileImage" priority="31" />
+      <Item value="doneEffects" priority="31" />
+      <Item value="ApplicationBarIconColorButton_Click`0" priority="31" />
+      <Item value="ApplicationBar" priority="31" />
+      <Item value="for" priority="31" />
+      <Item value="Queue" priority="31" />
+      <Item value="effect" priority="31" />
+      <Item value="Stack" priority="31" />
+      <Item value="GC`0" priority="26" />
+      <Item value="listBox1_SelectionChanged`0" priority="31" />
+      <Item value="SelectionChangedEventArgs" priority="28" />
+      <Item value="catch" priority="31" />
+      <Item value="Exception`0" priority="31" />
+      <Item value="NullableBoolConverter`0" priority="31" />
+      <Item value="_fbClient" priority="31" />
+      <Item value="LoginToFacebook`0" priority="31" />
+      <Item value="originalImage" priority="63" />
+      <Item value="originalImagePixels" priority="63" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Sqrt`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.Imaging.WriteableBitmap">
+      <Item value="Pixels" priority="215" />
+      <Item value="PixelHeight" priority="81" />
+      <Item value="PixelWidth" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Image">
+      <Item value="Height" priority="108" />
+      <Item value="Width" priority="108" />
+      <Item value="Source" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Photo_Effects.ImageManipulator">
+      <Item value="originalImage" priority="26" />
+      <Item value="finalImage" priority="80" />
+      <Item value="fileName" priority="26" />
+      <Item value="lastSavedFileName" priority="53" />
+      <Item value="SaveToMediaLibrary`0" priority="26" />
+      <Item value="modified" priority="53" />
+      <Item value="lastSavedGuid" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
+      <Item value="ActualHeight" priority="54" />
+      <Item value="ActualWidth" priority="26" />
+      <Item value="Visibility" priority="54" />
+      <Item value="SetBinding`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Tasks.ShareStatusTask">
+      <Item value="Show`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Imaging.BitmapCreateOptions">
+      <Item value="None" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Media.Picture">
+      <Item value="GetImage`0" priority="53" />
+      <Item value="ToString`0" priority="26" />
+      <Item value="Name" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="XamlCodeCompletionContext">
+      <Item value="Stretch" priority="5" />
+      <Item value="OrientationChanged" priority="5" />
+      <Item value="Collapsed" priority="11" />
+      <Item value="PerformanceProgressBar`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.StackPanel">
+      <Item value="Visibility" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Visibility">
+      <Item value="Collapsed" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.RoutedPropertyChangedEventArgs`1">
+      <Item value="NewValue" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Shapes.Ellipse">
+      <Item value="Width" priority="53" />
+      <Item value="Height" priority="55" />
+      <Item value="MaxWidth" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Slider">
+      <Item value="Value" priority="80" />
+      <Item value="Minimum" priority="54" />
+      <Item value="Maximum" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Navigation.NavigationService">
+      <Item value="GoBack`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Photo_Effects.Brush">
+      <Item value="Size" priority="53" />
+      <Item value="MinRadius" priority="80" />
+      <Item value="MaxRadius" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Tasks.PhotoResult">
+      <Item value="OriginalFileName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="LastIndexOf`0" priority="53" />
+      <Item value="Substring`0" priority="107" />
+      <Item value="Equals`0" priority="80" />
+      <Item value="Contains`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Media.MediaLibrary">
+      <Item value="SavedPictures" priority="80" />
+      <Item value="GetPictureFromToken`0" priority="26" />
+      <Item value="Pictures" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="26" />
+      <Item value="GetType`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="26" />
+      <Item value="IsNullOrEmpty`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.ApplicationUnhandledExceptionEventArgs">
+      <Item value="ExceptionObject" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Shell.ApplicationBarIconButton">
+      <Item value="IconUri" priority="26" />
+      <Item value="IsEnabled" priority="26" />
+      <Item value="Text" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.UriKind">
+      <Item value="RelativeOrAbsolute" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Tasks.MarketplaceReviewTask">
+      <Item value="Show`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Text" priority="188" />
+      <Item value="Focus`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.SelectionChangedEventArgs">
+      <Item value="OriginalSource" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ListBox">
+      <Item value="SelectedIndex" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="Open" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Read`0" priority="26" />
+      <Item value="Length" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.Stream">
+      <Item value="Length" priority="26" />
+      <Item value="Write`0" priority="26" />
+      <Item value="Flush`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Photo_Effects.SharePage+SocialNetwork">
+      <Item value="NONE" priority="27" />
+      <Item value="FACEBOOK" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Tasks.EmailComposeTask">
+      <Item value="Body" priority="53" />
+      <Item value="Show`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ProgressBar">
+      <Item value="IsIndeterminate" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="Append`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.HttpWebRequest">
+      <Item value="BeginGetRequestStream`0" priority="26" />
+      <Item value="EndGetRequestStream`0" priority="26" />
+      <Item value="BeginGetResponse`0" priority="26" />
+      <Item value="EndGetResponse`0" priority="26" />
+      <Item value="Credentials" priority="26" />
+      <Item value="AllowReadStreamBuffering" priority="26" />
+      <Item value="Accept" priority="26" />
+      <Item value="AllowAutoRedirect" priority="53" />
+      <Item value="HaveResponse" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.HttpWebResponse">
+      <Item value="StatusCode" priority="126" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.PasswordBox">
+      <Item value="Password" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Photo_Effects.TwitpicClient">
+      <Item value="UploadPhoto`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Threading.Dispatcher">
+      <Item value="BeginInvoke`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Facebook.FacebookApiEventArgs">
+      <Item value="Cancelled" priority="26" />
+      <Item value="Error" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="ActualHeight" priority="53" />
+      <Item value="Text" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Controls.WebBrowser">
+      <Item value="Visibility" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Array">
+      <Item value="Copy`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebResponse">
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Clear`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Shell.IApplicationBar">
+      <Item value="Buttons" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Photo_Effects.MainPage">
+      <Item value="ApplicationBar" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Queue`1">
+      <Item value="Enqueue`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Stack`1">
+      <Item value="Push`0" priority="53" />
+      <Item value="Pop`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.GC">
+      <Item value="Collect`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Facebook.FacebookClient">
+      <Item value="AccessToken" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

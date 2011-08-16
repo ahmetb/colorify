@@ -1,0 +1,46 @@
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\ApplicationIcon.png
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Background.png
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\AppManifest.xaml
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\ResolveAssemblyReference.cache
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\App.g.i.cs
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\MainPage.g.i.cs
+c:\users\asturgut\documents\visual studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\XapCacheFile.xml
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\ApplicationIcon.png
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Background.png
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Photo Effects.dll
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Photo Effects.pdb
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\AppManifest.xaml
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Photo_Effects.xap
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\App.g.i.cs
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\MainPage.g.i.cs
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\Photo Effects.g.resources
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\Photo Effects.dll
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\Photo Effects.pdb
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\obj\Debug\XapCacheFile.xml
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.color.png
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.gray.png
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.save.png
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.share.png
+C:\Users\yenely.REDMOND\Desktop\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.undo.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.color.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.gray.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.save.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.share.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.undo.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.cancel.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.ok.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.upload.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Facebook.dll
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Hammock.WindowsPhone.dll
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\SharePage.g.i.cs
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Photo Colorify.dll
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Photo Colorify.pdb
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Photo_Colorify.xap
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\Photo Colorify.g.resources
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\Photo Colorify.dll
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\obj\Debug\Photo Colorify.pdb
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\appbar.back.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\StripeBW.png
+C:\Users\asturgut\Documents\Visual Studio 2010\Projects\Photo Effects\Photo Effects\Bin\Debug\Images\StripeColorful.png
