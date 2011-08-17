@@ -1,0 +1,72 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PhotoColorify.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    OrientationChanged="PhoneApplicationPage_OrientationChanged"
+    >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,0" Orientation="Horizontal">
+            <TextBlock x:Name="ApplicationTitle" Text="EDIT PICTURE" Style="{StaticResource PhoneTextNormalStyle}"/>            
+            <Image Name="TileImage" Height="4" HorizontalAlignment="Right"  VerticalAlignment="Center"  Width="250"  />
+        </StackPanel>
+        <ProgressBar HorizontalAlignment="Left" Margin="15,0,0,632" Name="iamgeProgressBar" Width="435" Grid.Row="1" />
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Loaded="ContentPanel_Loaded">
+            <Image Height="629" HorizontalAlignment="Center" VerticalAlignment="Center"  Name="image" Stretch="Fill" Width="459" MouseLeftButtonUp="image_MouseLeftButtonUp" MouseLeftButtonDown="image_MouseLeftButtonDown" MouseMove="image_MouseMove">
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener x:Name="gestureListener" DoubleTap="gestureListener_DoubleTap" PinchStarted="gestureListener_PinchStarted" PinchDelta="gestureListener_PinchDelta"  PinchCompleted="gestureListener_PinchCompleted"/>
+                </toolkit:GestureService.GestureListener>
+            </Image>
+            <StackPanel Height="357" HorizontalAlignment="Center" Margin="12,0,6,0" Name="brushPanel" VerticalAlignment="Bottom" Width="438" Visibility="Collapsed" Background="#FF212021">
+                <TextBlock Height="30" Name="textBlock1" Text="Brush Tickness" HorizontalAlignment="Center" Padding="0,5,0,0" FontStyle="{StaticResource PhoneFontFamilyNormal}" />
+                <Slider Height="100" Name="brushslider" Width="364" DataContext="{Binding}" ValueChanged="brushslider_ValueChanged" FontFamily="{StaticResource PhoneFontFamilyNormal}" SmallChange="1" LargeChange="10" />
+                <Ellipse Height="40" Name="brushpreview" Stroke="#FFD12B2B" StrokeThickness="0" Width="40" Fill="#FF0091D5" />
+                <StackPanel x:Name="buttonList" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Content="Default" Height="71" Name="brushdefault" Width="160" Padding="5,5,10,5" Margin="0,15,0,0" Click="brushdefault_Click" />
+                    <Button Content="Ok" Height="71" Name="brushok" Width="160" Click="brushok_Click" Padding="5,5,10,5" Margin="0,15,0,0" />
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Margin="12,133,0,509" Name="warning" Style="{StaticResource PhoneTextNormalStyle}" Text="FIRST, PLEASE SELECT  A PICTURE..." />
+            
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+   <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.share.png" Text="Share" Click="ApplicationBarIconShareButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.save.png" Text="Save" Click="ApplicationBarIconSaveButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.gray.png" Text="Color" Click="ApplicationBarIconColorButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.undo.png" Text="Undo" Click="ApplicationBarIconUndoButton_Click" />
+            
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Load Picture..." Click="ApplicationBarIconLoadButton_Click"/>
+                <shell:ApplicationBarMenuItem Text="Reset Picture" Click="ApplicationBarResetMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="Brush Size" Click="ApplicationBarBrushMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="Rate App..." Click="ApplicationBarReviewMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="Send Feedback" Click="ApplicationBarFeedbackMenuItem_Click"/>
+            </shell:ApplicationBar.MenuItems>           
+            
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
