@@ -13,7 +13,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 
-namespace PhotoColorify
+namespace Colorify
 {
     public partial class MainPage : PhoneApplicationPage
     {
@@ -40,14 +40,20 @@ namespace PhotoColorify
         public MainPage()
         {
             InitializeComponent();
+
+            foreach (ApplicationBarIconButton button in this.ApplicationBar.Buttons)
+            {
+                if (button.Text.Equals("Color") || button.Text.Equals("Gray"))
+                {
+                    changebutton = button;
+                    break;
+                }
+            }
         }
 
 
         private void ContentPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            TileImage.Source = new BitmapImage(new Uri("/Images/StripeColorful.png", UriKind.RelativeOrAbsolute));
-            //imageMan = new ImageManipulator(fileName, image);
-            //image.Source = imageMan.finalImage;
             if (imageMan == null)
                 ApplicationBarIconLoadButton_Click(sender, e);
 
@@ -186,19 +192,8 @@ namespace PhotoColorify
                 image.Visibility = Visibility.Collapsed;
                 Stream choosenPhoto = e.ChosenPhoto;
 
-                if (action != PhotoAction.Color)
-                {
-                    action = PhotoAction.Gray;
-                    foreach (ApplicationBarIconButton button in this.ApplicationBar.Buttons)
-                    {
-                        if (button.Text.Equals("Color"))
-                        {
-                            changebutton = button;
-                            ApplicationBarIconColorButton_Click(changebutton, null);
-                            break;
-                        }
-                    }
-                }
+                action = PhotoAction.Gray;
+                ToogleBrush(changebutton, null);
 
                 imageMan = new ImageManipulator(choosenPhoto, image, brush.Size);
                 ThreadStart loadStart = new ThreadStart( () => {
@@ -222,9 +217,6 @@ namespace PhotoColorify
                         iamgeProgressBar.IsIndeterminate = false;
                         warning.Text = "";
 
-                        if (action != PhotoAction.Color && changebutton!=null)
-                            ApplicationBarIconColorButton_Click(changebutton, null);
-
                     });
 
                     System.GC.Collect();
@@ -238,39 +230,6 @@ namespace PhotoColorify
                 warning.Text = DEFAULT_WARNING_TEXT;
                 ((PhotoChooserTask)sender).Show();
             }
-        }
-
-        private void gray_Click(object sender, RoutedEventArgs e)
-        {
-            // The image will be read from isolated storage into the following byte array
-            try
-            {
-                byte[] data;
-                using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
-                {
-                    var files = isf.GetDirectoryNames();
-                    using (IsolatedStorageFileStream isfs = isf.OpenFile("WP7Logo.png", FileMode.Open, FileAccess.Read))
-                    {
-                        data = new byte[isfs.Length];
-                        isfs.Read(data, 0, data.Length);
-                        isfs.Close();
-                    }
-                }
-
-                MemoryStream ms = new MemoryStream(data);
-                BitmapImage bi = new BitmapImage();
-                bi.SetSource(ms);
-                image.Height = bi.PixelHeight;
-                image.Width = bi.PixelWidth;
-                image.Source = bi;
-            }
-            catch (Exception ex)
-            {
-                //do nothing
-            }
-
-            action = PhotoAction.Gray;
-            image.Source = imageMan.finalImage;
         }
 
         private void image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -389,13 +348,15 @@ namespace PhotoColorify
             SaveImageToLibrary(true);
         }
 
-        private void ApplicationBarIconColorButton_Click(object sender, EventArgs e)
+        private void ToogleBrush(object sender, EventArgs e)
         {
-            changebutton = sender as ApplicationBarIconButton; 
+            //changebutton = sender as ApplicationBarIconButton; 
             if(action == PhotoAction.Gray)
             {
                 action = PhotoAction.Color;
                 changebutton.Text = "Gray";
+                ApplicationTitle.Text = "NOW COLORING";
+                ApplicationTitle.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)); 
                 changebutton.IconUri = new Uri("/Images/appbar.gray.png", UriKind.RelativeOrAbsolute);
                 TileImage.Source = new BitmapImage(new Uri("/Images/StripeColorful.png", UriKind.RelativeOrAbsolute));
             }
@@ -403,6 +364,8 @@ namespace PhotoColorify
             {
                 action = PhotoAction.Gray;
                 changebutton.Text = "Color";
+                ApplicationTitle.Text = "NOW ERASING";
+                ApplicationTitle.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
                 changebutton.IconUri = new Uri("/Images/appbar.color.png", UriKind.RelativeOrAbsolute);
                 TileImage.Source = new BitmapImage(new Uri("/Images/StripeBW.png", UriKind.RelativeOrAbsolute));
             }
@@ -497,6 +460,14 @@ namespace PhotoColorify
         private void ApplicationBarFeedbackMenuItem_Click(object sender, EventArgs e)
         {
             App.SendEmail(App.COLORIFY_EMAIL, "Feedback", "");
+        }
+
+        private void TitlePanel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if(changebutton != null)
+            {
+                ToogleBrush(changebutton, null);
+            }
         }
     }
 }

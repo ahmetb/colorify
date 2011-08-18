@@ -12,7 +12,7 @@ using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework.Media;
 
-namespace PhotoColorify
+namespace Colorify
 {
     public partial class SharePage : PhoneApplicationPage
     {
@@ -220,11 +220,6 @@ namespace PhotoColorify
 
         private void listBox1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            listBox1_SelectionChanged(sender, null);
-        }
-
-        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             switch (listBox1.SelectedIndex)
             {
                 case 0: //Facebook
@@ -260,7 +255,7 @@ namespace PhotoColorify
                 case 2:
                     target = SocialNetwork.EMAIL;
                     twitterGrid.Visibility = Visibility.Collapsed;
-                    //SendAsEmail();
+                    SendAsEmail();
                     break;
                 default:
                     target = SocialNetwork.NONE;

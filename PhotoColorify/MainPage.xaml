@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="PhotoColorify.MainPage"
+    x:Class="Colorify.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -24,8 +24,8 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,0" Orientation="Horizontal">
-            <TextBlock x:Name="ApplicationTitle" Text="EDIT PICTURE" Style="{StaticResource PhoneTextNormalStyle}"/>            
-            <Image Name="TileImage" Height="4" HorizontalAlignment="Right"  VerticalAlignment="Center"  Width="250"  />
+            <TextBlock x:Name="ApplicationTitle" Text="" Style="{StaticResource PhoneTextNormalStyle}" Foreground="Yellow" MouseLeftButtonUp="TitlePanel_MouseLeftButtonUp"/>
+            <Image Name="TileImage" Height="5" HorizontalAlignment="Right"  VerticalAlignment="Center"  Width="100" MouseLeftButtonUp="TitlePanel_MouseLeftButtonUp" />
         </StackPanel>
         <ProgressBar HorizontalAlignment="Left" Margin="15,0,0,632" Name="iamgeProgressBar" Width="435" Grid.Row="1" />
 
@@ -55,7 +55,7 @@
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.share.png" Text="Share" Click="ApplicationBarIconShareButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.save.png" Text="Save" Click="ApplicationBarIconSaveButton_Click"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.gray.png" Text="Color" Click="ApplicationBarIconColorButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.gray.png" Text="Color" Click="ToogleBrush"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.undo.png" Text="Undo" Click="ApplicationBarIconUndoButton_Click" />
             
             <shell:ApplicationBar.MenuItems>

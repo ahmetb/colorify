@@ -4,7 +4,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 
-namespace PhotoColorify
+namespace Colorify
 {
     public class TwitpicClient
     {

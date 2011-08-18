@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using Microsoft.Xna.Framework.Media;
 
-namespace PhotoColorify
+namespace Colorify
 {
     public enum PhotoAction
     {
@@ -39,8 +39,8 @@ namespace PhotoColorify
 
         private int size = 15;
 
-        private readonly static string BRUSH_KEY = "brush";
-
+        private readonly static string BRUSH_KEY = "brush_key";
+        
         public Brush()
         {
             size = SettingsProvider.Get(BRUSH_KEY, DefaultRadius);
@@ -87,9 +87,12 @@ namespace PhotoColorify
         public bool modified = true;
         private int radius = 0;
         private int[] xcordinates;
-        private int InvalidClickX;
-        private int InvalidClickY;
+        //private int InvalidClickX;
+        //private int InvalidClickY;
         private int InvalidCount = 0;
+        private int SaveId = 0;
+
+        private readonly static string FILENAME_KEY = "filename_key";
 
         public ImageManipulator(string token, Image helper, int bsize)
         {
@@ -191,11 +194,6 @@ namespace PhotoColorify
             if (InvalidCount > 0)
             {
                 InvalidCount--;
-                if (InvalidCount == 0)
-                {
-                    InvalidClickX = -1;
-                    InvalidClickY = -1;
-                }
                 return;
             }
 
@@ -311,8 +309,6 @@ namespace PhotoColorify
 
             if (count < upper)
             {
-                this.InvalidClickX = xClick;
-                this.InvalidClickY = yClick;
                 this.InvalidCount = 2 - count;
             }
         }
@@ -320,7 +316,7 @@ namespace PhotoColorify
         public void SaveToMediaLibrary()
         {
             MediaLibrary mediaLibrary = new MediaLibrary();
-            string saveFilename = Guid.NewGuid().ToString() +".jpg";
+            string saveFilename = GetSaveFileName();
 
             MemoryStream ms = new MemoryStream(originalImagePixelsLength); //Will be compressed.
             finalImage.SaveJpeg(ms, finalImage.PixelWidth, finalImage.PixelHeight, 0, 100);
@@ -333,6 +329,21 @@ namespace PhotoColorify
                 ms.Close();
             }
             
+        }
+
+        private string GetSaveFileName()
+        {
+            return Guid.NewGuid().ToString() + ".jpg";
+        }
+
+        private string GetSaveFileName2()
+        {
+            SaveId = SettingsProvider.Get(FILENAME_KEY, SaveId);
+            SaveId++;
+            SettingsProvider.Set(FILENAME_KEY, SaveId);
+
+            string result = string.Format("PC_{0}.jpg", SaveId.ToString("D4"));
+            return result;
         }
 
         public void ResetPicture()

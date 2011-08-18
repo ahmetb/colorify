@@ -1,0 +1,111 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AssemblyInfo.cs" caret="510" fromTop="12" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="2378" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="894" fromTop="12" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="3804" fromTop="6" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="11406" fromTop="26" />
+      <File id="2E85069D-2961-4390-A96B-1E34E070182C/f:Brush.cs" caret="370" fromTop="8" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="17121" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="16770" fromTop="11" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8559" fromTop="30" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8593" fromTop="37" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1202" fromTop="20" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8395" fromTop="10" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8195" fromTop="6" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8195" fromTop="4" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13227" fromTop="29" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13744" fromTop="38" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="17382" fromTop="28" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6702" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="1641" fromTop="42" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="1579" fromTop="38" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="1743" fromTop="22" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="7810" fromTop="39" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6668" fromTop="13" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="12679" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1465" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="2346" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="8021" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="9618" fromTop="40" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="11406" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="894" fromTop="12" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="5247" fromTop="27" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="3804" fromTop="6" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="private" priority="31" />
+      <Item value="string" priority="127" />
+      <Item value="int" priority="63" />
+      <Item value="SettingsProvider`0" priority="31" />
+      <Item value="FILENAME_KEY" priority="31" />
+      <Item value="id" priority="63" />
+      <Item value="return" priority="63" />
+      <Item value="PhotoColorify" priority="31" />
+      <Item value="BitConverter`0" priority="31" />
+      <Item value="TileBrush`0" priority="31" />
+      <Item value="System" priority="31" />
+      <Item value="Windows" priority="27" />
+      <Item value="Media" priority="26" />
+      <Item value="Brush`0" priority="26" />
+      <Item value="SolidColorBrush`0" priority="31" />
+      <Item value="Color`0" priority="31" />
+      <Item value="if" priority="31" />
+      <Item value="null" priority="31" />
+      <Item value="ToogleBrush`0" priority="31" />
+      <Item value="action" priority="31" />
+      <Item value="PhotoAction`0" priority="26" />
+      <Item value="new" priority="31" />
+      <Item value="Guid`0" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PhotoColorify.SettingsProvider">
+      <Item value="Get`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="Text" priority="26" />
+      <Item value="Foreground" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Colorify.PhotoAction">
+      <Item value="Gray" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="XamlCodeCompletionContext">
+      <Item value="Landscape" priority="5" />
+      <Item value="LandscapeLeft" priority="5" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

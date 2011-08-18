@@ -1,6 +1,6 @@
 ﻿using System.IO.IsolatedStorage;
 
-namespace PhotoColorify
+namespace Colorify
 {
     public class SettingsProvider
     {

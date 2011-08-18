@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="PhotoColorify.SharePage"
+    x:Class="Colorify.SharePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -26,13 +26,13 @@
         <StackPanel x:Name="TitlePanel" Margin="12,0,0,489" Grid.RowSpan="2">
             <TextBlock Name="textBlock3" Style="{StaticResource PhoneTextNormalStyle}" Text="SHARE PICTURE" />
             <ProgressBar Height="20" HorizontalAlignment="Left" Margin="12,0,0,0" Name="loading" VerticalAlignment="Top" Width="452" IsIndeterminate="False" />
-            <TextBox Height="149" Name="titleBar" Width="463" MouseLeftButtonUp="titleBar_MouseLeftButtonUp" MaxLength="140" AcceptsReturn="True" />
+            <TextBox Height="149" Name="titleBar" Width="463" MouseLeftButtonUp="titleBar_MouseLeftButtonUp" AcceptsReturn="True" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,26,12,251">
             <TextBlock Name="textBlock6" Style="{StaticResource PhoneTextNormalStyle}" Text="CHOOSE ONE" Margin="12,12,12,0" />
-            <ListBox Height="184" HorizontalAlignment="Left" Margin="35,36,0,0" Name="listBox1" VerticalAlignment="Top" Width="433" FontSize="40" ItemsSource="{Binding}" FontFamily="{StaticResource PhoneFontFamilyNormal}" SelectionChanged="listBox1_SelectionChanged" MouseLeftButtonUp="listBox1_MouseLeftButtonUp">
+            <ListBox Height="184" HorizontalAlignment="Left" Margin="35,36,0,0" Name="listBox1" VerticalAlignment="Top" Width="433" FontSize="40" ItemsSource="{Binding}" FontFamily="{StaticResource PhoneFontFamilyNormal}" MouseLeftButtonUp="listBox1_MouseLeftButtonUp">
                 <ListBoxItem Content="Facebook" FontFamily="{StaticResource PhoneFontFamilyNormal}" />
                 <ListBoxItem Content="Twitter" FontFamily="{StaticResource PhoneFontFamilyNormal}" />
                 <ListBoxItem Content="E-mail..." FontFamily="{StaticResource PhoneFontFamilyNormal}" />

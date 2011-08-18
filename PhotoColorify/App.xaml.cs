@@ -15,7 +15,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 
-namespace PhotoColorify
+namespace Colorify
 {
     public partial class App : Application
     {
@@ -93,7 +93,6 @@ namespace PhotoColorify
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
             bool isAttached = System.Diagnostics.Debugger.IsAttached;
-            isAttached = false;
             if (isAttached)
             {
                 // An unhandled exception has occurred; break into the debugger
@@ -125,7 +124,7 @@ namespace PhotoColorify
         public static void SendEmail(string to, string subject, string body)
         {
             EmailComposeTask emailCompose = new EmailComposeTask();
-            emailCompose.To = COLORIFY_EMAIL;
+            emailCompose.To = to;
             emailCompose.Body = body;
             emailCompose.Subject = subject;
             emailCompose.Show();
