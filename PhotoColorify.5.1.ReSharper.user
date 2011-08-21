@@ -1,0 +1,67 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="imageMan" priority="1" />
+      <Item value="null" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="OKCancel" priority="0" />
+      <Item value="result" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="e" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBoxResult">
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Colorify.ImageManipulator">
+      <Item value="modified" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Tasks.PhotoResult">
+      <Item value="ChosenPhoto" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Media.Picture">
+      <Item value="GetImage`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="3118" fromTop="18" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6978" fromTop="7" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11976" fromTop="31" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6600" fromTop="22" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11963" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11705" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="3088" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6426" fromTop="0" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6721" fromTop="17" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6903" fromTop="22" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6457" fromTop="8" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11379" fromTop="25" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

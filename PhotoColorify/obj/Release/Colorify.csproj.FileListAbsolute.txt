@@ -26,3 +26,31 @@ C:\Users\asturgut\Documents\Visual Studio 2010\Projects\PhotoColorify\PhotoColor
 C:\Users\asturgut\Documents\Visual Studio 2010\Projects\PhotoColorify\PhotoColorify\obj\Release\Colorify.dll
 C:\Users\asturgut\Documents\Visual Studio 2010\Projects\PhotoColorify\PhotoColorify\obj\Release\Colorify.pdb
 C:\Users\asturgut\Documents\Visual Studio 2010\Projects\PhotoColorify\PhotoColorify\obj\Release\XapCacheFile.xml
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.back.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.cancel.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.color.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.gray.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.ok.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.save.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.share.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.undo.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\ApplicationIcon.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Background.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\appbar.upload.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\StripeBW.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Images\StripeColorful.png
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Colorify.dll
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Colorify.pdb
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\AppManifest.xaml
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Colorify.xap
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Facebook.dll
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Hammock.WindowsPhone.dll
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\ResolveAssemblyReference.cache
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\App.g.i.cs
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\MainPage.g.i.cs
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\SharePage.g.i.cs
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\Colorify.g.resources
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\Colorify.dll
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\Colorify.pdb
+C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\XapCacheFile.xml

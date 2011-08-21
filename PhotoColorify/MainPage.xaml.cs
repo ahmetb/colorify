@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
+using Microsoft.Xna.Framework.Media;
 
 namespace Colorify
 {
@@ -187,49 +188,53 @@ namespace Colorify
        {
             if(e.ChosenPhoto!=null)
             {
-                iamgeProgressBar.IsIndeterminate = true;
-                warning.Text = "LOADING GRAYSCALE PICTURE...";
-                image.Visibility = Visibility.Collapsed;
-                Stream choosenPhoto = e.ChosenPhoto;
-
-                action = PhotoAction.Gray;
-                ToogleBrush(changebutton, null);
-
-                imageMan = new ImageManipulator(choosenPhoto, image, brush.Size);
-                ThreadStart loadStart = new ThreadStart( () => {
-
-                    DateTime Start = DateTime.Now;
-                    imageMan.convertToBlackWhite();
-                    int timeSpend = (int)(DateTime.Now - Start).TotalMilliseconds;
-                    
-                    if( timeSpend < 2000)
-                    {
-                        Thread.Sleep(2000 - timeSpend);
-                    }
-                    
-                    Dispatcher.BeginInvoke( () => {
-                        
-                        image.RenderTransform = GetDefaultTransform();
-                        image.Width = ContentPanel.ActualWidth;
-                        image.Height = (image.Width*imageMan.originalImage.PixelHeight)/imageMan.originalImage.PixelWidth;
-                        image.Source = imageMan.finalImage;
-                        image.Visibility = Visibility.Visible;
-                        iamgeProgressBar.IsIndeterminate = false;
-                        warning.Text = "";
-
-                    });
-
-                    System.GC.Collect();
-                } );
-
-                Thread loadImage=new Thread(loadStart);
-                loadImage.Start();
+                StartLoadingImage(e.ChosenPhoto);
             }
             else if(imageMan==null)
             {
                 warning.Text = DEFAULT_WARNING_TEXT;
-                ((PhotoChooserTask)sender).Show();
+                //((PhotoChooserTask)sender).Show();
             }
+        }
+
+       private void StartLoadingImage(Stream choosenPhoto)
+        {
+            iamgeProgressBar.IsIndeterminate = true;
+            warning.Text = "LOADING GRAYSCALE PICTURE...";
+            image.Visibility = Visibility.Collapsed;
+
+            action = PhotoAction.Gray;
+            ToogleBrush(changebutton, null);
+
+            imageMan = new ImageManipulator(choosenPhoto, image, brush.Size);
+            ThreadStart loadStart = new ThreadStart( () => {
+
+                                                               DateTime Start = DateTime.Now;
+                                                               imageMan.convertToBlackWhite();
+                                                               int timeSpend = (int)(DateTime.Now - Start).TotalMilliseconds;
+                    
+                                                               if( timeSpend < 2000)
+                                                               {
+                                                                   Thread.Sleep(2000 - timeSpend);
+                                                               }
+                    
+                                                               Dispatcher.BeginInvoke( () => {
+                        
+                                                                                                 image.RenderTransform = GetDefaultTransform();
+                                                                                                 image.Width = ContentPanel.ActualWidth;
+                                                                                                 image.Height = (image.Width*imageMan.originalImage.PixelHeight)/imageMan.originalImage.PixelWidth;
+                                                                                                 image.Source = imageMan.finalImage;
+                                                                                                 image.Visibility = Visibility.Visible;
+                                                                                                 iamgeProgressBar.IsIndeterminate = false;
+                                                                                                 warning.Text = "";
+
+                                                               });
+
+                                                               System.GC.Collect();
+            } );
+
+            Thread loadImage=new Thread(loadStart);
+            loadImage.Start();
         }
 
         private void image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -271,19 +276,26 @@ namespace Colorify
             if (queryStrings.ContainsKey("token"))
             {
                 // Retrieve the picture from the media library using the token passed to the application.
-                warning.Text = "";
-                imageMan = new ImageManipulator(queryStrings["token"], image, brush.Size);
-                image.Source = imageMan.finalImage;
+                MediaLibrary library = new MediaLibrary();
+                Picture picture = library.GetPictureFromToken(queryStrings["token"]);
+                StartLoadingImage(picture.GetImage());
             }
-
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
-            ApplicationBarIconLoadButton_Click(null, null);
+            bool cancel = false;
+            if(imageMan!=null && imageMan.modified)
+            {
+                var result = MessageBox.Show("Are you sure you want to exit? All unsaved images will be lost.", "Warning", MessageBoxButton.OKCancel);
+                if(result == MessageBoxResult.Cancel)
+                {
+                    cancel = true;
+                }
+            }
 
-            // cancel the navigation
-            e.Cancel = true;
+            // cancel the navigation?
+            e.Cancel = cancel;
         }
 
 
