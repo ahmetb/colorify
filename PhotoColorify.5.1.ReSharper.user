@@ -18,6 +18,8 @@
       <Item value="OK" priority="0" />
       <Item value="true" priority="0" />
       <Item value="e" priority="0" />
+      <Item value="browserAuth" priority="0" />
+      <Item value="Visibility`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBox">
       <Item value="Show`0" priority="0" />
@@ -34,11 +36,18 @@
     <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Media.Picture">
       <Item value="GetImage`0" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Phone.Controls.WebBrowser">
+      <Item value="Visibility" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Visibility">
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="3118" fromTop="18" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6978" fromTop="7" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11394" fromTop="10" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="3427" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11976" fromTop="31" />
@@ -51,6 +60,9 @@
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6903" fromTop="22" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6457" fromTop="8" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11379" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="3427" fromTop="33" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="3343" fromTop="21" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="3261" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
