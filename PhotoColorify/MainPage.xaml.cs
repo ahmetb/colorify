@@ -285,7 +285,13 @@ namespace Colorify
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
             bool cancel = false;
-            if(imageMan!=null && imageMan.modified)
+
+            if(brushPanel.Visibility == Visibility.Visible)
+            {
+                brushPanel.Visibility = Visibility.Collapsed;
+                cancel = true;
+            }
+            else if(imageMan!=null && imageMan.modified)
             {
                 var result = MessageBox.Show("Are you sure you want to exit? All unsaved images will be lost.", "Warning", MessageBoxButton.OKCancel);
                 if(result == MessageBoxResult.Cancel)

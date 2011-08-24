@@ -1,6 +1,6 @@
-﻿<xapCache source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Colorify.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="8/19/2011 2:00:33 PM">
+﻿<xapCache source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\Colorify.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="8/23/2011 6:06:33 PM">
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="8/17/2011 7:34:12 PM" />
-  <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\Colorify.dll" archivePath="Colorify.dll" lastWriteTime="8/19/2011 2:00:32 PM" />
+  <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\obj\Release\Colorify.dll" archivePath="Colorify.dll" lastWriteTime="8/23/2011 6:06:32 PM" />
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Facebook.dll" archivePath="Facebook.dll" lastWriteTime="8/15/2011 7:58:02 PM" />
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Hammock.WindowsPhone.dll" archivePath="Hammock.WindowsPhone.dll" lastWriteTime="8/15/2011 7:58:02 PM" />
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="8/15/2011 7:58:02 PM" />
@@ -21,5 +21,5 @@
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Images\StripeBW.png" archivePath="Images\StripeBW.png" lastWriteTime="8/15/2011 7:58:04 PM" />
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Images\StripeColorful.png" archivePath="Images\StripeColorful.png" lastWriteTime="8/15/2011 7:58:04 PM" />
   <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="8/17/2011 7:40:52 PM" />
-  <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/19/2011 1:57:24 PM" />
+  <file source="C:\Users\yenely.REDMOND\Desktop\PhotoColorify\PhotoColorify\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/23/2011 6:06:32 PM" />
 </xapCache>

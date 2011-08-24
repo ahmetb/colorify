@@ -130,19 +130,12 @@ namespace Colorify
             get { return radius; }
             set
             {
-                if(value > radius)
+                radius = value;
+                xcordinates = new int[radius];
+                double cRadiusSqr = radius * radius;
+                for (int yi = 0; yi < radius; yi++)
                 {
-                    radius = value;
-                    xcordinates = new int[radius];
-                    double cRadiusSqr = radius*radius;
-                    for (int yi = 0; yi < radius; yi++)
-                    {
-                        xcordinates[yi] = (int) Math.Sqrt(cRadiusSqr - yi*yi);
-                    }
-                }
-                else
-                {
-                    radius = value;
+                    xcordinates[yi] = (int)Math.Sqrt(cRadiusSqr - yi * yi);
                 }
             }
         }
