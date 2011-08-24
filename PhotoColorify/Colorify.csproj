@@ -135,7 +135,6 @@
     <Content Include="Images\appbar.upload.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Images\Ayseli.png" />
     <Content Include="Images\StripeBW.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

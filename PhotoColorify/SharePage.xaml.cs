@@ -83,6 +83,19 @@ namespace Colorify
             //);
         }
 
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            bool cancel = false;
+
+            if (browserAuth.Visibility == Visibility.Visible)
+            {
+                browserAuth.Visibility = Visibility.Collapsed;
+                cancel = true;
+            }
+
+            // cancel the navigation?
+            e.Cancel = cancel;
+        }
 
         private void twitterLogout_click(object sender, EventArgs e)
         {
