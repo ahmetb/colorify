@@ -29,7 +29,7 @@ namespace Colorify
         private SocialNetwork target = SocialNetwork.NONE;
         
         private readonly string shareText = "Click here to share a text with picture.";
-        private bool uploadInProgres = false;
+        private int uploadInProgres = 0;
 
         private delegate void UploadFinishedDelegate(bool result, SocialNetwork network);
         private event UploadFinishedDelegate UploadFinished;
@@ -128,7 +128,7 @@ namespace Colorify
 
         void SharePage_UploadFinished(bool result, SharePage.SocialNetwork network)
         {
-            uploadInProgres = false;
+            Interlocked.Exchange(ref uploadInProgres, 0);
             Dispatcher.BeginInvoke( () => { loading.IsIndeterminate = false; } );
         }
 
@@ -188,7 +188,6 @@ namespace Colorify
         private void LoginToFacebook()
         {
             browserAuth.IsScriptEnabled = true;
-            browserAuth.Navigated += FacebookLoginBrowser_Navigated;
 
             var loginParameters = new Dictionary<string, object>
                                       {
@@ -207,24 +206,20 @@ namespace Colorify
 
         private void FacebookLoginBrowser_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
-            //FacebookOAuthResult.TryParse()
             FacebookOAuthResult oauthResult;
             if (FacebookOAuthResult.TryParse(e.Uri, out oauthResult))
             {
                 if (oauthResult.IsSuccess)
                 {
                     _fbClient = new FacebookClient(oauthResult.AccessToken);
+                    _fbClient.PostCompleted += new EventHandler<FacebookApiEventArgs>(fbApp_PostCompleted);
                     SettingsProvider.Set(FACEBOOK_SETTING_KEY, oauthResult.AccessToken);
                     CheckLogoutButtons();
                 }
                 browserAuth.Visibility = Visibility.Collapsed;
-                //TitlePanel.Visibility = System.Windows.Visibility.Visible;
-                //ContentPanel.Visibility = System.Windows.Visibility.Visible;
             }
             else
             {
-                //TitlePanel.Visibility = System.Windows.Visibility.Collapsed;
-                //ContentPanel.Visibility = System.Windows.Visibility.Collapsed;
                 browserAuth.Visibility = Visibility.Visible;
             }
 
@@ -247,6 +242,7 @@ namespace Colorify
                     else
                     {
                         _fbClient = new FacebookClient(SettingsProvider.Get(FACEBOOK_SETTING_KEY));
+                        _fbClient.PostCompleted += new EventHandler<FacebookApiEventArgs>(fbApp_PostCompleted);
                     }
                     break;
                 case 1:
@@ -278,23 +274,26 @@ namespace Colorify
 
         private void ApplicationBarOkButton_Click(object sender, EventArgs e)
         {
-            if(uploadInProgres)
-                return;
-
-            switch(target)
+            if (Interlocked.CompareExchange(ref uploadInProgres, 1, 0) == 0)
             {
-                case SocialNetwork.FACEBOOK:
-                    uploadInProgres = true;
-                    ShareToFacebook();
-                    break;
-                case SocialNetwork.EMAIL:
-                    SendAsEmail();
-                    break;
-                case SocialNetwork.TWITTER:
-                    uploadInProgres = true;
-                    SaveTwitterCredentialsIfRemember();
-                    ShareToTwitter();
-                    break;
+                switch (target)
+                {
+                    case SocialNetwork.FACEBOOK:
+                        ShareToFacebook();
+                        break;
+                    case SocialNetwork.EMAIL:
+                        SendAsEmail();
+                        Interlocked.Exchange(ref uploadInProgres, 0);
+                        break;
+                    case SocialNetwork.TWITTER:
+                        SaveTwitterCredentialsIfRemember();
+                        ShareToTwitter();
+                        break;
+
+                    default:
+                        Interlocked.Exchange(ref uploadInProgres, 0);
+                        break;
+                }
             }
         }
 
@@ -317,9 +316,9 @@ namespace Colorify
         private void ShareToTwitter()
         {
             string twitterUsername = frmTwitterUsername.Text;
-            if (string.IsNullOrEmpty(twitterUsername)) { uploadInProgres = false; frmTwitterUsername.Focus(); return; }
+            if (string.IsNullOrEmpty(twitterUsername)) { Interlocked.Exchange(ref uploadInProgres, 0); frmTwitterUsername.Focus(); return; }
             string twitterPassword = frmTwitterPassword.Password;
-            if (string.IsNullOrEmpty(twitterPassword)) { uploadInProgres = false; frmTwitterPassword.Focus(); return; }
+            if (string.IsNullOrEmpty(twitterPassword)) { Interlocked.Exchange(ref uploadInProgres, 0); frmTwitterPassword.Focus(); return; }
 
             string endpoint = "http://twitpic.com/api/uploadAndPost";
 
@@ -366,7 +365,7 @@ namespace Colorify
             if( _fbClient == null || _fbClient.AccessToken == null)
             {
                 LoginToFacebook();
-                uploadInProgres = false;
+                Interlocked.Exchange(ref uploadInProgres, 0);
                 return;
             }
 
@@ -379,7 +378,6 @@ namespace Colorify
                 {
                     UploadFinished(false, SocialNetwork.FACEBOOK);
                     MessageBox.Show("Could not load last saved picture. Sorry.", "Error", MessageBoxButton.OK);
-                    browserAuth.Navigated -= FacebookLoginBrowser_Navigated;
                     return;
                 }
             }
@@ -387,7 +385,6 @@ namespace Colorify
             {
                 UploadFinished(false, SocialNetwork.FACEBOOK);
                 MessageBox.Show("Error occurred during reading saved image.", "Error", MessageBoxButton.OK);
-                browserAuth.Navigated -= FacebookLoginBrowser_Navigated;
                 return;
             }
 
@@ -406,8 +403,7 @@ namespace Colorify
             {
                 parameters["message"] = titleBar.Text;
             }
-
-            _fbClient.PostCompleted += new EventHandler<FacebookApiEventArgs>(fbApp_PostCompleted);
+            
             _fbClient.PostAsync("me/photos", parameters);
         }
 
@@ -452,7 +448,6 @@ namespace Colorify
                     MessageBox.Show("You have succesfully posted photo to your Facebook profile.", "Tip", MessageBoxButton.OK);
                 }
                 
-                browserAuth.Navigated -= FacebookLoginBrowser_Navigated;
             });
         }
 

@@ -39,7 +39,7 @@
             </ListBox>
             <TextBlock Margin="8,6,4,0" Name="textBlock1" Style="{StaticResource PhoneTextNormalStyle}" Text="Choose one..." Height="0" VerticalAlignment="Top" />
         </Grid>
-        <phone:WebBrowser x:Name="browserAuth" Visibility="Collapsed" Grid.RowSpan="2" Margin="0,0,0,6" />
+        <phone:WebBrowser x:Name="browserAuth" Visibility="Collapsed" Grid.RowSpan="2" Margin="0,0,0,6" Navigated="FacebookLoginBrowser_Navigated" />
         
         <Grid Grid.Row="1" Height="239" HorizontalAlignment="Left" Margin="14,264,0,0" Name="twitterGrid" VerticalAlignment="Top" Width="450" Visibility="Collapsed">
             <TextBlock Height="30" HorizontalAlignment="Left" Name="textBlock2" Text="Twitter Login" VerticalAlignment="Top" Margin="51,0,0,0" />
