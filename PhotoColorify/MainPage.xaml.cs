@@ -112,6 +112,7 @@ namespace Colorify
                 _oldScaleFactor = e.DistanceRatio;
 
                 UpdateImage(scaleFactor, translationDelta);
+
             }
         }
 
