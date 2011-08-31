@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
 using System.Collections.Generic;
-using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using Facebook;
@@ -111,6 +111,7 @@ namespace Colorify
             CheckLogoutButtons();
         }
 
+       
         private void facebookLogout_click(object sender, EventArgs e)
         {
             bool b = SettingsProvider.Delete(FACEBOOK_SETTING_KEY);
@@ -123,6 +124,9 @@ namespace Colorify
                 target = SocialNetwork.NONE;
                 listBox1.SelectedIndex = -1;
             }
+
+            browserAuth.Visibility = Visibility.Collapsed;
+            browserAuth.Navigate(new Uri("http://m.facebook.com/logout.php?confirm=1"));
             CheckLogoutButtons();
         }
 
@@ -176,17 +180,19 @@ namespace Colorify
         
         private void SendAsEmail()
         {
-            string body = null;
+            string body = "";
             if (!titleBar.Text.Equals(shareText))
             {
                  body = titleBar.Text;
             }
 
+            MessageBox.Show("Please don't forget to add your image as attachment. This version of SDK does not allow us to add images as attachment.", "Warning", MessageBoxButton.OK);
             App.SendEmail("", "Colorified Picture", body);
         }
 
         private void LoginToFacebook()
         {
+            loading.IsIndeterminate = true;
             browserAuth.IsScriptEnabled = true;
 
             var loginParameters = new Dictionary<string, object>
@@ -195,13 +201,11 @@ namespace Colorify
                                           { "display", "touch" } // by default for wp7 builds only (in Facebook.dll), display is set to touch.
                                       };
 
-            loading.IsIndeterminate = true;
+            
 
             var navigateUrl = FacebookOAuthClient.GetLoginUrl(fbApiAppId, null, _extendedPermissions, loginParameters);
-
             browserAuth.Navigate(navigateUrl);
             browserAuth.Visibility = Visibility.Visible;
-            
         }
 
         private void FacebookLoginBrowser_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
@@ -220,7 +224,15 @@ namespace Colorify
             }
             else
             {
-                browserAuth.Visibility = Visibility.Visible;
+                string fbLogoutDoc = browserAuth.SaveToString(); 
+                Regex regex = new Regex("\\<A href=\\\"(.*)\\\".*data-sigil=\\\"logout\\\""); 
+                MatchCollection matches = regex.Matches(fbLogoutDoc); 
+                
+                if (matches.Count > 0)
+                {
+                    string finalLogout = string.Format("http://m.facebook.com{0}", matches[0].Groups[1].ToString());
+                    browserAuth.Navigate(new Uri(finalLogout));
+                }
             }
 
             loading.IsIndeterminate = false;

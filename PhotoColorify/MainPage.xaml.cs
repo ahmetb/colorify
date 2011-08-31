@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.IsolatedStorage;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -86,42 +85,42 @@ namespace Colorify
             _oldFinger2 = e.GetPosition(image, 1);
             _oldScaleFactor = 1;
             zooming = true;
+            image.RenderTransformOrigin = new Point(0,0);
         }
 
         private void gestureListener_PinchDelta(object sender, PinchGestureEventArgs e)
         {
             if(!zooming)
                 return;
+            if (TotalImageScale>1 && TotalImageScale<5)
+            {
+                var scaleFactor = e.DistanceRatio / _oldScaleFactor;
 
-            var scaleFactor = e.DistanceRatio / _oldScaleFactor;
+                var currentFinger1 = e.GetPosition(image, 0);
+                var currentFinger2 = e.GetPosition(image, 1);
 
-            var currentFinger1 = e.GetPosition(image, 0);
-            var currentFinger2 = e.GetPosition(image, 1);
+                var translationDelta = GetTranslationDelta(
+                    currentFinger1,
+                    currentFinger2,
+                    _oldFinger1,
+                    _oldFinger2,
+                    ImagePosition,
+                    scaleFactor);
 
-            var translationDelta = GetTranslationDelta(
-                currentFinger1,
-                currentFinger2,
-                _oldFinger1,
-                _oldFinger2,
-                ImagePosition,
-                scaleFactor);
+                _oldFinger1 = currentFinger1;
+                _oldFinger2 = currentFinger2;
+                _oldScaleFactor = e.DistanceRatio;
 
-            _oldFinger1 = currentFinger1;
-            _oldFinger2 = currentFinger2;
-            _oldScaleFactor = e.DistanceRatio;
-
-            UpdateImage(scaleFactor, translationDelta);
+                UpdateImage(scaleFactor, translationDelta);
+            }
         }
 
         private void UpdateImage(double scaleFactor, Point delta)
         {
             TotalImageScale *= scaleFactor;
-            if (TotalImageScale < 1)
-                TotalImageScale = 1;
-            else if (TotalImageScale > 5)
-                TotalImageScale = 5;
-                
-            ImagePosition = new Point(ImagePosition.X + delta.X, ImagePosition.Y + delta.Y);
+           
+            ImagePosition.X += delta.X;
+            ImagePosition.Y += delta.Y;
 
             var transform = image.RenderTransform as CompositeTransform;
             transform.ScaleX = TotalImageScale;

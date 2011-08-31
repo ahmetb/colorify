@@ -37,7 +37,7 @@
                 </toolkit:GestureService.GestureListener>
             </Image>
             <StackPanel Height="357" HorizontalAlignment="Center" Margin="12,0,6,0" Name="brushPanel" VerticalAlignment="Bottom" Width="438" Visibility="Collapsed" Background="#FF212021">
-                <TextBlock Height="30" Name="textBlock1" Text="Brush Tickness" HorizontalAlignment="Center" Padding="0,5,0,0" FontStyle="{StaticResource PhoneFontFamilyNormal}" />
+                <TextBlock Height="30" Name="textBlock1" Text="Brush Thickness" HorizontalAlignment="Center" Padding="0,5,0,0" FontStyle="{StaticResource PhoneFontFamilyNormal}" />
                 <Slider Height="100" Name="brushslider" Width="364" DataContext="{Binding}" ValueChanged="brushslider_ValueChanged" FontFamily="{StaticResource PhoneFontFamilyNormal}" SmallChange="1" LargeChange="10" />
                 <Ellipse Height="40" Name="brushpreview" Stroke="#FFD12B2B" StrokeThickness="0" Width="40" Fill="#FF0091D5" />
                 <StackPanel x:Name="buttonList" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal">
