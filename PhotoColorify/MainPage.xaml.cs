@@ -81,10 +81,10 @@ namespace Colorify
 
         private void gestureListener_PinchStarted(object sender, PinchStartedGestureEventArgs e)
         {
+            zooming = true;
             _oldFinger1 = e.GetPosition(image, 0);
             _oldFinger2 = e.GetPosition(image, 1);
             _oldScaleFactor = 1;
-            zooming = true;
             image.RenderTransformOrigin = new Point(0,0);
         }
 
@@ -92,7 +92,7 @@ namespace Colorify
         {
             if(!zooming)
                 return;
-            if (TotalImageScale>1 && TotalImageScale<5)
+            
             {
                 var scaleFactor = e.DistanceRatio / _oldScaleFactor;
 
@@ -193,44 +193,49 @@ namespace Colorify
             else if(imageMan==null)
             {
                 warning.Text = DEFAULT_WARNING_TEXT;
+                warning.InvalidateArrange();
                 //((PhotoChooserTask)sender).Show();
             }
-        }
+
+           CheckTrialMode();
+       }
 
        private void StartLoadingImage(Stream choosenPhoto)
-        {
-            iamgeProgressBar.IsIndeterminate = true;
-            warning.Text = "LOADING GRAYSCALE PICTURE...";
+       {
             image.Visibility = Visibility.Collapsed;
-
-            action = PhotoAction.Gray;
-            ToogleBrush(changebutton, null);
-
+            warning.Text = "LOADING GRAYSCALE PICTURE...";
+            ColoringTitle.Text = "";
+            TileImage.Source = null;
+            iamgeProgressBar.IsIndeterminate = true;
             imageMan = new ImageManipulator(choosenPhoto, image, brush.Size);
+
             ThreadStart loadStart = new ThreadStart( () => {
 
-                                                               DateTime Start = DateTime.Now;
-                                                               imageMan.convertToBlackWhite();
-                                                               int timeSpend = (int)(DateTime.Now - Start).TotalMilliseconds;
+                        DateTime Start = DateTime.Now;
+                        imageMan.convertToBlackWhite();
+                        int timeSpend = (int)(DateTime.Now - Start).TotalMilliseconds;
                     
-                                                               if( timeSpend < 2000)
-                                                               {
-                                                                   Thread.Sleep(2000 - timeSpend);
-                                                               }
+                        if( timeSpend < 5000)
+                        {
+                            Thread.Sleep(5000 - timeSpend);
+                        }
                     
-                                                               Dispatcher.BeginInvoke( () => {
-                        
-                                                                                                 image.RenderTransform = GetDefaultTransform();
-                                                                                                 image.Width = ContentPanel.ActualWidth;
-                                                                                                 image.Height = (image.Width*imageMan.originalImage.PixelHeight)/imageMan.originalImage.PixelWidth;
-                                                                                                 image.Source = imageMan.finalImage;
-                                                                                                 image.Visibility = Visibility.Visible;
-                                                                                                 iamgeProgressBar.IsIndeterminate = false;
-                                                                                                 warning.Text = "";
+                        Dispatcher.BeginInvoke( () => {
 
-                                                               });
+                                warning.Text = "";
+                                action = PhotoAction.Gray;
+                                ToogleBrush(changebutton, null);
 
-                                                               System.GC.Collect();
+                                image.RenderTransform = GetDefaultTransform();
+                                image.Width = ContentPanel.ActualWidth;
+                                image.Height = (image.Width*imageMan.originalImage.PixelHeight)/imageMan.originalImage.PixelWidth;
+                                image.Source = imageMan.finalImage;
+                                image.Visibility = Visibility.Visible;
+                                iamgeProgressBar.IsIndeterminate = false;
+
+                        });
+
+                        System.GC.Collect();
             } );
 
             Thread loadImage=new Thread(loadStart);
@@ -373,8 +378,8 @@ namespace Colorify
             {
                 action = PhotoAction.Color;
                 changebutton.Text = "Gray";
-                ApplicationTitle.Text = "NOW COLORING";
-                ApplicationTitle.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)); 
+                ColoringTitle.Text = "NOW COLORING";
+                ColoringTitle.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)); 
                 changebutton.IconUri = new Uri("/Images/appbar.gray.png", UriKind.RelativeOrAbsolute);
                 TileImage.Source = new BitmapImage(new Uri("/Images/StripeColorful.png", UriKind.RelativeOrAbsolute));
             }
@@ -382,8 +387,8 @@ namespace Colorify
             {
                 action = PhotoAction.Gray;
                 changebutton.Text = "Color";
-                ApplicationTitle.Text = "NOW ERASING";
-                ApplicationTitle.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                ColoringTitle.Text = "NOW ERASING";
+                ColoringTitle.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
                 changebutton.IconUri = new Uri("/Images/appbar.color.png", UriKind.RelativeOrAbsolute);
                 TileImage.Source = new BitmapImage(new Uri("/Images/StripeBW.png", UriKind.RelativeOrAbsolute));
             }
@@ -406,6 +411,7 @@ namespace Colorify
             brushpreview.Width = brush.Size * 2;
             brushpreview.Height = brush.Size * 2;
             brushPanel.Visibility = Visibility.Visible;
+            //brushslider.Focus();
         }
 
 
@@ -418,7 +424,10 @@ namespace Colorify
         private void brushok_Click(object sender, RoutedEventArgs e)
         {
             brush.Size = (int) brushslider.Value;
-            imageMan.Radius = (int)((imageMan.finalImage.PixelWidth * brush.Size) / image.Width);
+            if(imageMan!=null)
+            {
+                imageMan.Radius = (int)((imageMan.finalImage.PixelWidth * brush.Size) / image.Width);
+            }
             brushPanel.Visibility = Visibility.Collapsed;
         }
 
@@ -430,10 +439,12 @@ namespace Colorify
 
         private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
         {
+            bool portrait = ((e.Orientation & PageOrientation.Portrait)==(PageOrientation.Portrait));
+
             if (imageMan == null)
                 return;
-
-            if ((e.Orientation & PageOrientation.Portrait) == (PageOrientation.Portrait))
+            
+            if (portrait)
             {
                 image.Width = ContentPanel.ActualWidth;
                 image.Height = (image.Width * imageMan.originalImage.PixelHeight) / imageMan.originalImage.PixelWidth;
@@ -486,6 +497,28 @@ namespace Colorify
             {
                 ToogleBrush(changebutton, null);
             }
+        }
+
+        private void CheckTrialMode()
+        {
+            if(ApplicationLicense.IsInTrialMode)
+            {
+                if (SettingsProvider.Get(ApplicationLicense.AD_KEY) == null)
+                {
+                    MessageBox.Show(ApplicationLicense.AD_MESSAGE);
+                    SettingsProvider.Set(ApplicationLicense.AD_KEY, "1");
+                }
+                adControl.Visibility = Visibility.Visible; 
+            }
+            else
+            {
+                adControl.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void adControl_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)
+        {
+            MessageBox.Show("Ad Error: " + e.Error);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Colorify
 
         public static readonly string FACEBOOK_SETTING_KEY = "fbOAuthToken";
         public static readonly string TWITTER_USERNAME_KEY = "twUsername";
-        public static readonly string TWITTER_PASSWORD_KEY = "twPassword";
+        public static readonly string TWITTER_PASSWORD_KEY = "twPassword";  
 
         private string filename;
         
@@ -186,7 +186,7 @@ namespace Colorify
                  body = titleBar.Text;
             }
 
-            MessageBox.Show("Please don't forget to add your image as attachment. This version of SDK does not allow us to add images as attachment.", "Warning", MessageBoxButton.OK);
+            MessageBox.Show("Please don't forget to add your image as attachment. This version of Windows Phone SDK does not allow us to add images as attachment automatically.", "Warning", MessageBoxButton.OK);
             App.SendEmail("", "Colorified Picture", body);
         }
 
@@ -288,6 +288,7 @@ namespace Colorify
         {
             if (Interlocked.CompareExchange(ref uploadInProgres, 1, 0) == 0)
             {
+                this.Focus();
                 switch (target)
                 {
                     case SocialNetwork.FACEBOOK:
@@ -347,24 +348,25 @@ namespace Colorify
                 bool uploaded = false;
                 try
                 {
-                    uploaded = twitpic.UploadPhoto(GetLastSavedPictureContents(), text, twitterUsername, twitterPassword);
+                    byte[] contents = GetLastSavedPictureContents();
+                    uploaded = twitpic.UploadPhoto(contents, text, twitterUsername, twitterPassword);
                 }
-               catch(Exception ex)
-               {
+                catch(Exception ex)
+                {
                    
-               }
+                }
 
                 UploadFinished(uploaded, SocialNetwork.TWITTER);
                 Dispatcher.BeginInvoke( () => {
-                loading.IsIndeterminate = false;
-                if (uploaded)
-                {
-                    MessageBox.Show("You have succesfully posted photo to your Twitter stream.", "Tip", MessageBoxButton.OK);
-                } 
-                else
-                {
-                    MessageBox.Show("Failed to send photo to Twitpic. Check you username/password or please try again later.", "Error", MessageBoxButton.OK);
-                }
+                    loading.IsIndeterminate = false;
+                    if (uploaded)
+                    {
+                        MessageBox.Show("You have succesfully posted photo to your Twitter stream.", "Tip", MessageBoxButton.OK);
+                    } 
+                    else
+                    {
+                        MessageBox.Show("Failed to send photo to Twitpic. Check you username/password or please try again later.", "Error", MessageBoxButton.OK);
+                    }
                 });
             });
 
@@ -432,7 +434,9 @@ namespace Colorify
                 }
             }
 
-
+            if (picture == null)
+                return null;
+            
             Stream imageStream = picture.GetImage();
 
             byte[] contents = new byte[imageStream.Length];
@@ -484,7 +488,26 @@ namespace Colorify
             App.SendEmail(App.COLORIFY_EMAIL, "Feedback", "");
         }
 
-     
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            CheckTrialMode();
+        }
 
+        private void CheckTrialMode()
+        {
+            if (ApplicationLicense.IsInTrialMode)
+            {
+                if (SettingsProvider.Get(ApplicationLicense.AD_KEY) == null)
+                {
+                    MessageBox.Show(ApplicationLicense.AD_MESSAGE);
+                    SettingsProvider.Set(ApplicationLicense.AD_KEY, "1");
+                }
+                adControl.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                adControl.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }

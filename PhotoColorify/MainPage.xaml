@@ -12,31 +12,38 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     shell:SystemTray.IsVisible="True"
-    OrientationChanged="PhoneApplicationPage_OrientationChanged"
-    >
+    OrientationChanged="PhoneApplicationPage_OrientationChanged" xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,0" Orientation="Horizontal">
-            <TextBlock x:Name="ApplicationTitle" Text="" Style="{StaticResource PhoneTextNormalStyle}" Foreground="Yellow" MouseLeftButtonUp="TitlePanel_MouseLeftButtonUp"/>
+        <StackPanel x:Name="TitlePanel"  Grid.Row="0" Margin="12,0,0,0" Orientation="Horizontal">
+            <TextBlock x:Name="ColoringTitle" Text="" Style="{StaticResource PhoneTextNormalStyle}" Foreground="Yellow" MouseLeftButtonUp="TitlePanel_MouseLeftButtonUp"/>
             <Image Name="TileImage" Height="5" HorizontalAlignment="Right"  VerticalAlignment="Center"  Width="100" MouseLeftButtonUp="TitlePanel_MouseLeftButtonUp" />
         </StackPanel>
-        <ProgressBar HorizontalAlignment="Left" Margin="15,0,0,632" Name="iamgeProgressBar" Width="435" Grid.Row="1" />
+        <ProgressBar Grid.Row="0" Name="iamgeProgressBar" Height="20" />
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Loaded="ContentPanel_Loaded">
-            <Image Height="629" HorizontalAlignment="Center" VerticalAlignment="Center"  Name="image" Stretch="Fill" Width="459" MouseLeftButtonUp="image_MouseLeftButtonUp" MouseLeftButtonDown="image_MouseLeftButtonDown" MouseMove="image_MouseMove">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="273*" />
+                <ColumnDefinition Width="183*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="629" HorizontalAlignment="Center" VerticalAlignment="Center"  Name="image" Stretch="Fill" Width="459" MouseLeftButtonUp="image_MouseLeftButtonUp" MouseLeftButtonDown="image_MouseLeftButtonDown" MouseMove="image_MouseMove" Grid.ColumnSpan="2" Margin="-2,24">
                 <toolkit:GestureService.GestureListener>
                     <toolkit:GestureListener x:Name="gestureListener" DoubleTap="gestureListener_DoubleTap" PinchStarted="gestureListener_PinchStarted" PinchDelta="gestureListener_PinchDelta"  PinchCompleted="gestureListener_PinchCompleted"/>
                 </toolkit:GestureService.GestureListener>
             </Image>
-            <StackPanel Height="357" HorizontalAlignment="Center" Margin="12,0,6,0" Name="brushPanel" VerticalAlignment="Bottom" Width="438" Visibility="Collapsed" Background="#FF212021">
+            
+            <TextBlock  Name="warning" VerticalAlignment="Center" Style="{StaticResource PhoneTextNormalStyle}" Text="FIRST, PLEASE SELECT  A PICTURE..." Margin="24,281,0,281" Grid.ColumnSpan="2" />
+
+            <StackPanel Height="357" HorizontalAlignment="Center" Margin="12,0,6,0" Name="brushPanel" VerticalAlignment="Bottom" Width="438" Visibility="Collapsed" Background="#FF212021" Grid.ColumnSpan="2">
                 <TextBlock Height="30" Name="textBlock1" Text="Brush Thickness" HorizontalAlignment="Center" Padding="0,5,0,0" FontStyle="{StaticResource PhoneFontFamilyNormal}" />
                 <Slider Height="100" Name="brushslider" Width="364" DataContext="{Binding}" ValueChanged="brushslider_ValueChanged" FontFamily="{StaticResource PhoneFontFamilyNormal}" SmallChange="1" LargeChange="10" />
                 <Ellipse Height="40" Name="brushpreview" Stroke="#FFD12B2B" StrokeThickness="0" Width="40" Fill="#FF0091D5" />
@@ -45,9 +52,11 @@
                     <Button Content="Ok" Height="71" Name="brushok" Width="160" Click="brushok_Click" Padding="5,5,10,5" Margin="0,15,0,0" />
                 </StackPanel>
             </StackPanel>
-            <TextBlock Margin="12,133,0,509" Name="warning" Style="{StaticResource PhoneTextNormalStyle}" Text="FIRST, PLEASE SELECT  A PICTURE..." />
             
         </Grid>
+
+        <my:AdControl  Grid.Row="2" Name="adControl" Height="80" AdUnitId="10021543" ApplicationId="6a998053-649b-41ad-8c14-8bba5c3eb5dc" BorderThickness="2" ErrorOccurred="adControl_ErrorOccurred" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Visibility="Collapsed"/>
+        
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
