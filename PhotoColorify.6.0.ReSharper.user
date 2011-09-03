@@ -2,46 +2,47 @@
   <RecentFiles>
     <RecentFiles>
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AssemblyInfo.cs" caret="510" fromTop="12" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="3007" fromTop="30" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:TwitpicClient.cs" caret="1138" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="5471" fromTop="0" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="3933" fromTop="13" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="6716" fromTop="27" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="145" fromTop="6" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="19147" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4424" fromTop="44" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:Settings.cs" caret="792" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="8264" fromTop="13" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="5042" fromTop="35" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="4246" fromTop="20" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="274" fromTop="7" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1649" fromTop="17" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18503" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="1876" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="6305" fromTop="19" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="3948" fromTop="31" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="66" fromTop="2" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="31" fromTop="1" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2778" fromTop="12" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="3867" fromTop="37" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="3016" fromTop="14" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="3703" fromTop="33" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="840" fromTop="23" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="16583" fromTop="33" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="13640" fromTop="30" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="14260" fromTop="42" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="11048" fromTop="13" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="6607" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="6724" fromTop="27" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="0" fromTop="0" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="19033" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="2643" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4668" fromTop="41" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="2253" fromTop="19" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="19322" fromTop="31" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="2961" fromTop="37" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6751" fromTop="28" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="19542" fromTop="25" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="422" fromTop="14" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="19124" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="215" fromTop="10" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="145" fromTop="6" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="3999" fromTop="34" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4424" fromTop="44" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="15835" fromTop="22" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="906" fromTop="13" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18375" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="649" fromTop="22" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="18721" fromTop="16" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="274" fromTop="7" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18966" fromTop="28" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="19088" fromTop="43" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18503" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="4402" fromTop="21" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8375" fromTop="39" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="7490" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2721" fromTop="11" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2721" fromTop="11" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2972" fromTop="11" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8591" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4568" fromTop="42" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1388" fromTop="12" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1657" fromTop="17" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4811" fromTop="44" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6577" fromTop="6" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="7085" fromTop="19" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8298" fromTop="40" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="7667" fromTop="33" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="3267" fromTop="30" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="2726" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1649" fromTop="17" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6901" fromTop="25" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13813" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="14328" fromTop="35" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -67,7 +68,7 @@
       <Item value="private" priority="31" />
       <Item value="string" priority="127" />
       <Item value="int" priority="63" />
-      <Item value="SettingsProvider`0" priority="31" />
+      <Item value="SettingsProvider`0" priority="63" />
       <Item value="FILENAME_KEY" priority="31" />
       <Item value="id" priority="63" />
       <Item value="return" priority="127" />
@@ -80,18 +81,18 @@
       <Item value="Brush`0" priority="26" />
       <Item value="SolidColorBrush`0" priority="31" />
       <Item value="Color`0" priority="31" />
-      <Item value="if" priority="159" />
-      <Item value="null" priority="191" />
+      <Item value="if" priority="223" />
+      <Item value="null" priority="287" />
       <Item value="ToogleBrush`0" priority="31" />
       <Item value="action" priority="31" />
       <Item value="PhotoAction`0" priority="26" />
-      <Item value="new" priority="159" />
+      <Item value="new" priority="223" />
       <Item value="Guid`0" priority="31" />
       <Item value="LayoutRoot" priority="63" />
       <Item value="WebBrowser" priority="28" />
       <Item value="FacebookLoginBrowser_Navigated`0" priority="32" />
       <Item value="Collapsed" priority="50" />
-      <Item value="Thickness" priority="28" />
+      <Item value="Thickness" priority="86" />
       <Item value="Dispatcher" priority="31" />
       <Item value="Thread`0" priority="31" />
       <Item value="ThreadPool`0" priority="31" />
@@ -100,7 +101,7 @@
       <Item value="try" priority="31" />
       <Item value="throw" priority="31" />
       <Item value="Uri" priority="28" />
-      <Item value="MessageBox`0" priority="63" />
+      <Item value="MessageBox`0" priority="95" />
       <Item value="MessageBoxButton`0" priority="26" />
       <Item value="image" priority="31" />
       <Item value="Point" priority="28" />
@@ -108,14 +109,18 @@
       <Item value="picture" priority="31" />
       <Item value="ContentPanel" priority="31" />
       <Item value="frmTwitterPassword" priority="31" />
-      <Item value="this" priority="63" />
-      <Item value="adControl" priority="95" />
-      <Item value="Application`0" priority="31" />
-      <Item value="ApplicationLicense`0" priority="26" />
+      <Item value="this" priority="95" />
+      <Item value="adControl" priority="127" />
+      <Item value="Application`0" priority="63" />
+      <Item value="ApplicationLicense`0" priority="58" />
       <Item value="Visible" priority="16" />
-      <Item value="else" priority="31" />
+      <Item value="else" priority="63" />
       <Item value="sender" priority="31" />
       <Item value="e" priority="31" />
+      <Item value="brushPanel" priority="31" />
+      <Item value="brushslider" priority="26" />
+      <Item value="imageMan" priority="31" />
+      <Item value="TileImage" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@PhotoColorify.SettingsProvider">
       <Item value="Get`0" priority="26" />
@@ -127,8 +132,9 @@
       <Item value="ToString`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
-      <Item value="Text" priority="26" />
+      <Item value="Text" priority="53" />
       <Item value="Foreground" priority="53" />
+      <Item value="InvalidateArrange`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Colorify.PhotoAction">
       <Item value="Gray" priority="26" />
@@ -142,6 +148,7 @@
     <ItemStatistics item="XamlCodeCompletionContext">
       <Item value="Landscape" priority="5" />
       <Item value="LandscapeLeft" priority="5" />
+      <Item value="VerticalAlignment" priority="11" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
       <Item value="Children" priority="26" />
@@ -170,7 +177,7 @@
       <Item value="Collapsed" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBox">
-      <Item value="Show`0" priority="53" />
+      <Item value="Show`0" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBoxButton">
       <Item value="OK" priority="26" />
@@ -181,6 +188,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.Image">
       <Item value="RenderTransformOrigin" priority="26" />
+      <Item value="Source" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Colorify.SharePage">
       <Item value="Focus`0" priority="26" />
@@ -190,9 +198,25 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Microsoft.Advertising.Mobile.UI.AdControl">
       <Item value="Visibility" priority="53" />
+      <Item value="Margin" priority="81" />
+      <Item value="Width" priority="26" />
+      <Item value="Height" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Microsoft.Advertising.AdErrorEventArgs">
       <Item value="Error" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Colorify.SettingsProvider">
+      <Item value="Get`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Thickness">
+      <Item value="Top" priority="80" />
+      <Item value="Bottom" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Colorify.MainPage">
+      <Item value="Width" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Slider">
+      <Item value="Focus`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
