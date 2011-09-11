@@ -1,16 +1,18 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AssemblyInfo.cs" caret="510" fromTop="12" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:TwitpicClient.cs" caret="1138" fromTop="24" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:Settings.cs" caret="792" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="8264" fromTop="13" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="5042" fromTop="35" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="4246" fromTop="20" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="274" fromTop="7" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1649" fromTop="17" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="4246" fromTop="20" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="8264" fromTop="13" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18503" fromTop="25" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="1876" fromTop="0" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="274" fromTop="7" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13623" fromTop="17" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="6312" fromTop="141" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AppManifest.xml" caret="0" fromTop="0" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:WMAppManifest.xml" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="15835" fromTop="22" />

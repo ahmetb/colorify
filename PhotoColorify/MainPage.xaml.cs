@@ -32,10 +32,11 @@ namespace Colorify
         // these two fully define the zoom state:
         private double TotalImageScale = 1d;
         private Point ImagePosition = new Point(0, 0);
-
+        private const double MAX_IMAGE_ZOOM = 5;
         private Point _oldFinger1;
         private Point _oldFinger2;
         private double _oldScaleFactor;
+
 
         public MainPage()
         {
@@ -59,89 +60,91 @@ namespace Colorify
 
         }
 
-        void gestureListener_DoubleTap(object sender, GestureEventArgs e)
-        {
-            if(imageMan!=null)
-            {
-                Point p = e.GetPosition(image);
-                if (zoomed)
-                {
-                    zoomed = false;
-                    ApplyZoomTransform(sender as Image, 1, p);
-                }
-                else
-                {
-                    zoomed = true;
-                    ApplyZoomTransform(sender as Image, zoomFactor, p);
-                }
-
-                e.Handled = true;
-            }
-        }
 
         private void gestureListener_PinchStarted(object sender, PinchStartedGestureEventArgs e)
         {
+            if (imageMan == null)
+                return;
+
             zooming = true;
             _oldFinger1 = e.GetPosition(image, 0);
             _oldFinger2 = e.GetPosition(image, 1);
             _oldScaleFactor = 1;
-            image.RenderTransformOrigin = new Point(0,0);
         }
 
         private void gestureListener_PinchDelta(object sender, PinchGestureEventArgs e)
         {
-            if(!zooming)
+            if (imageMan == null)
                 return;
-            
-            {
-                var scaleFactor = e.DistanceRatio / _oldScaleFactor;
 
-                var currentFinger1 = e.GetPosition(image, 0);
-                var currentFinger2 = e.GetPosition(image, 1);
+            zooming = true;
+            var scaleFactor = e.DistanceRatio / _oldScaleFactor;
+            if (!IsScaleValid(scaleFactor))
+                return;
 
-                var translationDelta = GetTranslationDelta(
-                    currentFinger1,
-                    currentFinger2,
-                    _oldFinger1,
-                    _oldFinger2,
-                    ImagePosition,
-                    scaleFactor);
+            var currentFinger1 = e.GetPosition(image, 0);
+            var currentFinger2 = e.GetPosition(image, 1);
 
-                _oldFinger1 = currentFinger1;
-                _oldFinger2 = currentFinger2;
-                _oldScaleFactor = e.DistanceRatio;
+            var translationDelta = GetTranslationDelta(
+                currentFinger1,
+                currentFinger2,
+                _oldFinger1,
+                _oldFinger2,
+                ImagePosition,
+                scaleFactor);
 
-                UpdateImage(scaleFactor, translationDelta);
+            _oldFinger1 = currentFinger1;
+            _oldFinger2 = currentFinger2;
+            _oldScaleFactor = e.DistanceRatio;
 
-            }
+            UpdateImageScale(scaleFactor);
+            UpdateImagePosition(translationDelta);
         }
 
-        private void UpdateImage(double scaleFactor, Point delta)
+        private void gestureListener_PinchCompleted(object sender, PinchGestureEventArgs e)
         {
-            TotalImageScale *= scaleFactor;
-           
-            ImagePosition.X += delta.X;
-            ImagePosition.Y += delta.Y;
+            if (imageMan == null)
+                return;
 
-            var transform = image.RenderTransform as CompositeTransform;
-            transform.ScaleX = TotalImageScale;
-            transform.ScaleY = TotalImageScale;
-            transform.TranslateX = ImagePosition.X;
-            transform.TranslateY = ImagePosition.Y;
+            zoomed = true;
+            zooming = false;
         }
 
+        private void gestureListener_DoubleTap(object sender, GestureEventArgs e)
+        {
+            if (imageMan == null)
+                return;
+                        
+            Point p = e.GetPosition(image);
+            if (zoomed)
+            {
+                zoomed = false;
+                ApplyZoomTransform(sender as Image, 1, p);
+            }
+            else
+            {
+                zoomed = true;
+                ApplyZoomTransform(sender as Image, zoomFactor, p);
+            }              
+        }
+
+        #region Utils
+
+        /// <summary>
+        /// Computes the translation needed to keep the image centered between your fingers.
+        /// </summary>
         private Point GetTranslationDelta(
             Point currentFinger1, Point currentFinger2,
             Point oldFinger1, Point oldFinger2,
             Point currentPosition, double scaleFactor)
         {
             var newPos1 = new Point(
-                currentFinger1.X + (currentPosition.X - oldFinger1.X) * scaleFactor,
-                currentFinger1.Y + (currentPosition.Y - oldFinger1.Y) * scaleFactor);
+             currentFinger1.X + (currentPosition.X - oldFinger1.X) * scaleFactor,
+             currentFinger1.Y + (currentPosition.Y - oldFinger1.Y) * scaleFactor);
 
             var newPos2 = new Point(
-                currentFinger2.X + (currentPosition.X - oldFinger2.X) * scaleFactor,
-                currentFinger2.Y + (currentPosition.Y - oldFinger2.Y) * scaleFactor);
+             currentFinger2.X + (currentPosition.X - oldFinger2.X) * scaleFactor,
+             currentFinger2.Y + (currentPosition.Y - oldFinger2.Y) * scaleFactor);
 
             var newPos = new Point(
                 (newPos1.X + newPos2.X) / 2,
@@ -152,12 +155,93 @@ namespace Colorify
                 newPos.Y - currentPosition.Y);
         }
 
-
-        private void gestureListener_PinchCompleted(object sender, PinchGestureEventArgs e)
+        /// <summary>
+        /// Updates the scaling factor by multiplying the delta.
+        /// </summary>
+        private void UpdateImageScale(double scaleFactor)
         {
-            zoomed = true;
-            zooming = false;
+            TotalImageScale *= scaleFactor;
+            ApplyScale();
         }
+
+        /// <summary>
+        /// Applies the computed scale to the image control.
+        /// </summary>
+        private void ApplyScale()
+        {
+            ((CompositeTransform)image.RenderTransform).ScaleX = TotalImageScale;
+            ((CompositeTransform)image.RenderTransform).ScaleY = TotalImageScale;
+        }
+
+        /// <summary>
+        /// Updates the image position by applying the delta.
+        /// Checks that the image does not leave empty space around its edges.
+        /// </summary>
+        private void UpdateImagePosition(Point delta)
+        {
+            var newPosition = new Point(ImagePosition.X + delta.X, ImagePosition.Y + delta.Y);
+
+            if (newPosition.X > 0) newPosition.X = 0;
+            if (newPosition.Y > 0) newPosition.Y = 0;
+
+            if ((image.ActualWidth * TotalImageScale) + newPosition.X < image.ActualWidth)
+                newPosition.X = image.ActualWidth - (image.ActualWidth * TotalImageScale);
+
+            if ((image.ActualHeight * TotalImageScale) + newPosition.Y < image.ActualHeight)
+                newPosition.Y = image.ActualHeight - (image.ActualHeight * TotalImageScale);
+
+            ImagePosition = newPosition;
+
+            ApplyPosition();
+        }
+
+        /// <summary>
+        /// Applies the computed position to the image control.
+        /// </summary>
+        private void ApplyPosition()
+        {
+            ((CompositeTransform)image.RenderTransform).TranslateX = ImagePosition.X;
+            ((CompositeTransform)image.RenderTransform).TranslateY = ImagePosition.Y;
+        }
+
+        /// <summary>
+        /// Resets the zoom to its original scale and position
+        /// </summary>
+        private void ResetImagePosition()
+        {
+            TotalImageScale = 1;
+            ImagePosition = new Point(0, 0);
+            ApplyScale();
+            ApplyPosition();
+        }
+
+        /// <summary>
+        /// Checks that dragging by the given amount won't result in empty space around the image
+        /// </summary>
+        private bool IsDragValid(double scaleDelta, Point translateDelta)
+        {
+            if (ImagePosition.X + translateDelta.X > 0 || ImagePosition.Y + translateDelta.Y > 0)
+                return false;
+
+            if ((image.ActualWidth * TotalImageScale * scaleDelta) + (ImagePosition.X + translateDelta.X) < image.ActualWidth)
+                return false;
+
+            if ((image.ActualHeight * TotalImageScale * scaleDelta) + (ImagePosition.Y + translateDelta.Y) < image.ActualHeight)
+                return false;
+
+            return true;
+        }
+
+        /// <summary>
+        /// Tells if the scaling is inside the desired range
+        /// </summary>
+        private bool IsScaleValid(double scaleDelta)
+        {
+            return (TotalImageScale * scaleDelta >= 1) && (TotalImageScale * scaleDelta <= MAX_IMAGE_ZOOM);
+        }
+
+        #endregion
+
 
         void ApplyZoomTransform(Image element, double iZoomFactor, Point zoomCenter)
         {
@@ -257,14 +341,14 @@ namespace Colorify
                 double actualWidth = image.ActualWidth;
 
                 ThreadPool.QueueUserWorkItem((a) =>
-                                                 {
-                                                     int xClick = (int)(imageMan.finalImage.PixelWidth * (next.X / actualWidth));
-                                                     int yClick = (int)(imageMan.finalImage.PixelHeight * (next.Y / actualHeight));
+                {
+                    int xClick = (int)(imageMan.finalImage.PixelWidth * (next.X / actualWidth));
+                    int yClick = (int)(imageMan.finalImage.PixelHeight * (next.Y / actualHeight));
                                                      
-                                                     imageMan.MofifyImage(action, xClick, yClick); 
+                    imageMan.MofifyImage(action, xClick, yClick); 
                                                      
-                                                     Dispatcher.BeginInvoke(() => {image.Source=imageMan.finalImage;});
-                                                 });
+                    Dispatcher.BeginInvoke(() => {image.Source=imageMan.finalImage;});
+                });
             }
         }
 
