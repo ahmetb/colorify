@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.IO.IsolatedStorage;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -21,13 +22,15 @@ namespace Colorify
         internal int xClick;
         internal int yClick;
         internal int cRaidus;
+        internal bool marker;
 
-        public Effect(PhotoAction action, int xClick, int yClick, int cRaidus)
+        public Effect(PhotoAction action, int xClick, int yClick, int cRaidus, bool marker)
         {
             this.action = action;
             this.xClick = xClick;
             this.yClick = yClick;
             this.cRaidus = cRaidus;
+            this.marker = marker;
         }
     }
 
@@ -91,6 +94,7 @@ namespace Colorify
         //private int InvalidClickY;
         private int InvalidCount = 0;
         private int SaveId = 0;
+        private int marker = 0;
 
         private readonly static string FILENAME_KEY = "filename_key";
 
@@ -182,6 +186,11 @@ namespace Colorify
         }
 
 
+        public void setMarker()
+        {
+            Interlocked.CompareExchange(ref marker, 1, 0);
+        }
+
         public void MofifyImage(PhotoAction action,int xClick, int yClick)
         {
             if (InvalidCount > 0)
@@ -190,7 +199,8 @@ namespace Colorify
                 return;
             }
 
-            Effect effect = new Effect(action, xClick, yClick, radius);
+            bool mark = Interlocked.CompareExchange(ref marker, 0, 1) == 1;
+            Effect effect = new Effect(action, xClick, yClick, radius, mark);
             switch (action)
             {
                 case PhotoAction.Gray:
@@ -262,13 +272,15 @@ namespace Colorify
             }
         }
 
-        public void UndoLast()
+        public void UndoLastPaints()
         {
-            int index = doneEffects.Count - 1;
-            if(index >= 0)
+            while (doneEffects.Count > 0)
             {
                 Effect effect = doneEffects.Pop();
                 MofifyImage(effect);
+
+                if (effect.marker)
+                    break;
             }
         }
 
@@ -293,19 +305,17 @@ namespace Colorify
                     Effect effect = doneEffects.Peek();
                     if (CalculateError(effect.xClick, xClick, effect.yClick, yClick) < error)
                     {
-                        doneEffects.Pop();
-                        MofifyImage(effect);
-                        count++;
+                        UndoLastPaints();
                     }
                 }
             }
 
             if (count < upper)
             {
-                this.InvalidCount = 2 - count;
+                this.InvalidCount = upper - count;
             }
         }
-
+        
         public void SaveToMediaLibrary()
         {
             MediaLibrary mediaLibrary = new MediaLibrary();

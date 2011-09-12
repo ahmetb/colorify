@@ -27,7 +27,7 @@ namespace Colorify
         private Point previous;
         private double zoomFactor = 3;
         private bool zoomed = false;
-        private bool zooming = false;
+        private int zooming = 0;
 
         // these two fully define the zoom state:
         private double TotalImageScale = 1d;
@@ -66,10 +66,11 @@ namespace Colorify
             if (imageMan == null)
                 return;
 
-            zooming = true;
+            Interlocked.CompareExchange(ref zooming, 1, 0);
             _oldFinger1 = e.GetPosition(image, 0);
             _oldFinger2 = e.GetPosition(image, 1);
             _oldScaleFactor = 1;
+            image.Source = imageMan.finalImage;
         }
 
         private void gestureListener_PinchDelta(object sender, PinchGestureEventArgs e)
@@ -77,7 +78,7 @@ namespace Colorify
             if (imageMan == null)
                 return;
 
-            zooming = true;
+            Interlocked.CompareExchange(ref zooming, 1, 0);
             var scaleFactor = e.DistanceRatio / _oldScaleFactor;
             if (!IsScaleValid(scaleFactor))
                 return;
@@ -107,7 +108,7 @@ namespace Colorify
                 return;
 
             zoomed = true;
-            zooming = false;
+            Interlocked.Exchange(ref zooming, 0);
         }
 
         private void gestureListener_DoubleTap(object sender, GestureEventArgs e)
@@ -257,6 +258,8 @@ namespace Colorify
             }
             transform.ScaleX = iZoomFactor;
             transform.ScaleY = iZoomFactor;
+            transform.TranslateX = 0;
+            transform.TranslateY = 0;
 
             element.RenderTransform = transform;
 
@@ -281,7 +284,7 @@ namespace Colorify
                 //((PhotoChooserTask)sender).Show();
             }
 
-           CheckTrialMode();
+            ApplicationLicense.CheckTrialMode(adControl);
        }
 
        private void StartLoadingImage(Stream choosenPhoto)
@@ -299,9 +302,9 @@ namespace Colorify
                         imageMan.convertToBlackWhite();
                         int timeSpend = (int)(DateTime.Now - Start).TotalMilliseconds;
                     
-                        if( timeSpend < 5000)
+                        if( timeSpend < 2000)
                         {
-                            Thread.Sleep(5000 - timeSpend);
+                            Thread.Sleep(2000 - timeSpend);
                         }
                     
                         Dispatcher.BeginInvoke( () => {
@@ -328,28 +331,60 @@ namespace Colorify
 
         private void image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //previous = e.GetPosition(image);
-            image_MouseMove(sender, e);
+            if (imageMan!=null && Interlocked.CompareExchange(ref zooming, zooming, zooming)!=1)
+            {
+                imageMan.setMarker();
+                previous = e.GetPosition(image);
+                image_MouseMove(sender, e);
+            }
         }
 
         private void image_MouseMove(object sender, MouseEventArgs e)
         {
-            if (imageMan != null && !zooming)
+            if (imageMan!=null)
             {
                 Point next = e.GetPosition(image);
+                if (Interlocked.CompareExchange(ref zooming, zooming, zooming) == 1)
+                {
+                    previous = next;
+                    return;
+                }
                 double actualHeight = image.ActualHeight;
                 double actualWidth = image.ActualWidth;
 
-                ThreadPool.QueueUserWorkItem((a) =>
+                double xdiff= next.X - previous.X;
+                double ydiff= next.Y - previous.Y;
+                double deltarad = Math.Sqrt(xdiff*xdiff + ydiff*ydiff);
+                if(deltarad > brush.Size)
                 {
-                    int xClick = (int)(imageMan.finalImage.PixelWidth * (next.X / actualWidth));
-                    int yClick = (int)(imageMan.finalImage.PixelHeight * (next.Y / actualHeight));
-                                                     
-                    imageMan.MofifyImage(action, xClick, yClick); 
-                                                     
-                    Dispatcher.BeginInvoke(() => {image.Source=imageMan.finalImage;});
-                });
+                    int maxdevide = (int) (deltarad/brush.Size)+1;
+                    Point pp = previous;
+                    for(int i=0; i<maxdevide; i++)
+                    {
+                        PaintPoint(actualWidth, actualHeight, pp);
+                        pp.X += xdiff / maxdevide;
+                        pp.Y += ydiff / maxdevide;
+                    }
+                }
+                else
+                {
+                    PaintPoint(actualWidth, actualHeight, next);
+                }
+                previous = next;
             }
+        }
+
+        private void PaintPoint(double actualWidth, double actualHeight, Point next)
+        {
+            ThreadPool.QueueUserWorkItem((a) =>
+            {
+                int xClick = (int) (imageMan.finalImage.PixelWidth*(next.X/actualWidth));
+                int yClick = (int) (imageMan.finalImage.PixelHeight*(next.Y/actualHeight));
+
+                imageMan.MofifyImage(action, xClick, yClick);
+
+                Dispatcher.BeginInvoke(() => { image.Source = imageMan.finalImage; });
+            });
         }
 
         private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -483,7 +518,7 @@ namespace Colorify
             if (imageMan == null)
                 return;
 
-            imageMan.UndoLast();
+            imageMan.UndoLastPaints();
             image.Source = imageMan.finalImage;
         }
 
@@ -552,20 +587,22 @@ namespace Colorify
             if (imageMan != null)
             {
                 imageMan.ResetPicture();
-                image.RenderTransform = GetDefaultTransform();
+                ResetImagePosition();
                 image.Source = imageMan.finalImage;
                 zoomed = false;
-                zooming = false;
+                zooming = 0;
             }
         }
 
         private CompositeTransform GetDefaultTransform()
         {
             CompositeTransform transform = new CompositeTransform();
+            transform.TranslateX = 0;
+            transform.TranslateY = 0;
             transform.ScaleX = 1;
             transform.ScaleY = 1;
-            transform.CenterX = image.Width / 2;
-            transform.CenterY = image.Height / 2;
+            transform.CenterX = image.ActualWidth / 2;
+            transform.CenterY = image.ActualHeight / 2;
 
             return transform;
         }
@@ -582,27 +619,10 @@ namespace Colorify
                 ToogleBrush(changebutton, null);
             }
         }
-
-        private void CheckTrialMode()
-        {
-            if(ApplicationLicense.IsInTrialMode)
-            {
-                if (SettingsProvider.Get(ApplicationLicense.AD_KEY) == null)
-                {
-                    MessageBox.Show(ApplicationLicense.AD_MESSAGE);
-                    SettingsProvider.Set(ApplicationLicense.AD_KEY, "1");
-                }
-                adControl.Visibility = Visibility.Visible; 
-            }
-            else
-            {
-                adControl.Visibility = Visibility.Collapsed;
-            }
-        }
-
+        
         private void adControl_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)
         {
-            MessageBox.Show("Ad Error: " + e.Error);
+            adControl.Refresh();
         }
     }
 }

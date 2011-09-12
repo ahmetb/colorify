@@ -53,7 +53,7 @@
             <CheckBox Content="Remember Me" Height="72" HorizontalAlignment="Left" Margin="150,140,0,0" Name="frmTwitterRemember" VerticalAlignment="Top" Grid.ColumnSpan="2" />
         </Grid>
 
-        <my:AdControl Name="adControl" Height="80" AdUnitId="10021543" ApplicationId="6a998053-649b-41ad-8c14-8bba5c3eb5dc" BorderThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Visibility="Collapsed" Grid.Row="3"/>
+        <my:AdControl Name="adControl" Height="80" AdUnitId="10021543" ApplicationId="6a998053-649b-41ad-8c14-8bba5c3eb5dc" BorderThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Visibility="Collapsed" Grid.Row="3" ErrorOccurred="adControl_ErrorOccurred"/>
 
     </Grid>
 

@@ -490,24 +490,12 @@ namespace Colorify
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            CheckTrialMode();
+            ApplicationLicense.CheckTrialMode(adControl);
         }
 
-        private void CheckTrialMode()
+        private void adControl_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)
         {
-            if (ApplicationLicense.IsInTrialMode)
-            {
-                if (SettingsProvider.Get(ApplicationLicense.AD_KEY) == null)
-                {
-                    MessageBox.Show(ApplicationLicense.AD_MESSAGE);
-                    SettingsProvider.Set(ApplicationLicense.AD_KEY, "1");
-                }
-                adControl.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                adControl.Visibility = Visibility.Collapsed;
-            }
+            adControl.Refresh();
         }
     }
 }

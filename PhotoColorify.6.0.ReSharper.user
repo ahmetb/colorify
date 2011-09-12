@@ -5,33 +5,16 @@
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:Settings.cs" caret="792" fromTop="24" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1649" fromTop="17" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="4246" fromTop="20" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="8264" fromTop="13" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18503" fromTop="25" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="274" fromTop="7" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13623" fromTop="17" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:App.xaml.cs" caret="6312" fromTop="141" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AppManifest.xml" caret="0" fromTop="0" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/d:Properties/f:WMAppManifest.xml" caret="0" fromTop="0" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="18528" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="7051" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="15835" fromTop="22" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="906" fromTop="13" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18375" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="649" fromTop="22" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="18721" fromTop="16" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ApplicationLicense.cs" caret="274" fromTop="7" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18966" fromTop="28" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="19088" fromTop="43" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml.cs" caret="18503" fromTop="25" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:SharePage.xaml" caret="4402" fromTop="21" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8375" fromTop="39" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="7490" fromTop="24" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2721" fromTop="11" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2721" fromTop="11" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="2972" fromTop="11" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="8591" fromTop="25" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4568" fromTop="42" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1388" fromTop="12" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1657" fromTop="17" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="4811" fromTop="44" />
@@ -43,8 +26,25 @@
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="2726" fromTop="26" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml" caret="1649" fromTop="17" />
       <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="6901" fromTop="25" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13813" fromTop="26" />
-      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="14328" fromTop="35" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="14644" fromTop="26" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="15159" fromTop="35" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="13479" fromTop="41" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="12995" fromTop="31" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="12934" fromTop="31" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="12670" fromTop="29" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="12442" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="12239" fromTop="20" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11934" fromTop="28" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:MainPage.xaml.cs" caret="11692" fromTop="18" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="12203" fromTop="38" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="641" fromTop="24" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="830" fromTop="30" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="2700" fromTop="39" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="9802" fromTop="35" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="9817" fromTop="36" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="9629" fromTop="29" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="6824" fromTop="7" />
+      <File id="E570316F-CBE4-4562-8778-76BDD14803B2/f:ImageManipulator.cs" caret="7051" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -67,9 +67,9 @@
   </SettingsComponent>
   <CompletionStatisticsManager>
     <ItemStatistics item="CSharpCodeCompletionContext">
-      <Item value="private" priority="31" />
+      <Item value="private" priority="63" />
       <Item value="string" priority="127" />
-      <Item value="int" priority="63" />
+      <Item value="int" priority="159" />
       <Item value="SettingsProvider`0" priority="63" />
       <Item value="FILENAME_KEY" priority="31" />
       <Item value="id" priority="63" />
@@ -83,12 +83,12 @@
       <Item value="Brush`0" priority="26" />
       <Item value="SolidColorBrush`0" priority="31" />
       <Item value="Color`0" priority="31" />
-      <Item value="if" priority="223" />
+      <Item value="if" priority="319" />
       <Item value="null" priority="287" />
       <Item value="ToogleBrush`0" priority="31" />
       <Item value="action" priority="31" />
       <Item value="PhotoAction`0" priority="26" />
-      <Item value="new" priority="223" />
+      <Item value="new" priority="255" />
       <Item value="Guid`0" priority="31" />
       <Item value="LayoutRoot" priority="63" />
       <Item value="WebBrowser" priority="28" />
@@ -106,23 +106,43 @@
       <Item value="MessageBox`0" priority="95" />
       <Item value="MessageBoxButton`0" priority="26" />
       <Item value="image" priority="31" />
-      <Item value="Point" priority="28" />
+      <Item value="Point" priority="57" />
       <Item value="TotalImageScale" priority="31" />
       <Item value="picture" priority="31" />
       <Item value="ContentPanel" priority="31" />
       <Item value="frmTwitterPassword" priority="31" />
-      <Item value="this" priority="95" />
+      <Item value="this" priority="127" />
       <Item value="adControl" priority="127" />
       <Item value="Application`0" priority="63" />
       <Item value="ApplicationLicense`0" priority="58" />
       <Item value="Visible" priority="16" />
-      <Item value="else" priority="63" />
+      <Item value="else" priority="95" />
       <Item value="sender" priority="31" />
       <Item value="e" priority="31" />
       <Item value="brushPanel" priority="31" />
       <Item value="brushslider" priority="26" />
-      <Item value="imageMan" priority="31" />
+      <Item value="imageMan" priority="63" />
       <Item value="TileImage" priority="31" />
+      <Item value="ydiff" priority="63" />
+      <Item value="deltarad" priority="31" />
+      <Item value="brush" priority="63" />
+      <Item value="Point`0" priority="31" />
+      <Item value="previous" priority="95" />
+      <Item value="next" priority="95" />
+      <Item value="for" priority="31" />
+      <Item value="i" priority="95" />
+      <Item value="xdiff" priority="31" />
+      <Item value="maxdevide" priority="31" />
+      <Item value="internal" priority="31" />
+      <Item value="bool" priority="63" />
+      <Item value="marker" priority="31" />
+      <Item value="ref" priority="31" />
+      <Item value="setMarker`0" priority="63" />
+      <Item value="while" priority="31" />
+      <Item value="Effect`0" priority="31" />
+      <Item value="effect" priority="96" />
+      <Item value="doneEffects" priority="31" />
+      <Item value="break" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@PhotoColorify.SettingsProvider">
       <Item value="Get`0" priority="26" />
@@ -186,7 +206,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Point">
       <Item value="Equals`0" priority="26" />
-      <Item value="X" priority="27" />
+      <Item value="X" priority="135" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.Image">
       <Item value="RenderTransformOrigin" priority="26" />
@@ -219,6 +239,16 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.Slider">
       <Item value="Focus`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Colorify.Brush">
+      <Item value="Size" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Colorify.Effect">
+      <Item value="marker" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Stack`1">
+      <Item value="Peek`0" priority="26" />
+      <Item value="Count" priority="53" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

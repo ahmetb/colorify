@@ -41,7 +41,7 @@
                 </toolkit:GestureService.GestureListener>
             </Image>
             
-            <TextBlock  Name="warning" VerticalAlignment="Center" Style="{StaticResource PhoneTextNormalStyle}" Text="FIRST, PLEASE SELECT  A PICTURE..." Margin="24,281,0,281" Grid.ColumnSpan="2" />
+            <TextBlock  Name="warning" VerticalAlignment="Center" Style="{StaticResource PhoneTextNormalStyle}" Text="FIRST, PLEASE SELECT A PICTURE..." Grid.ColumnSpan="2" />
 
             <StackPanel Height="357" HorizontalAlignment="Center" Margin="12,0,6,0" Name="brushPanel" VerticalAlignment="Bottom" Width="438" Visibility="Collapsed" Background="#FF212021" Grid.ColumnSpan="2">
                 <TextBlock Height="30" Name="textBlock1" Text="Brush Thickness" HorizontalAlignment="Center" Padding="0,5,0,0" FontStyle="{StaticResource PhoneFontFamilyNormal}" />
