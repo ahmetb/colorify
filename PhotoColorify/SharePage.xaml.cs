@@ -186,7 +186,7 @@ namespace Colorify
                  body = titleBar.Text;
             }
 
-            MessageBox.Show("Please don't forget to add your image as attachment. This version of Windows Phone SDK does not allow us to add images as attachment automatically.", "Warning", MessageBoxButton.OK);
+            MessageBox.Show("Please don't forget to add your image as attachment. This version of Windows Phone SDK does not allow us to add attachments programmatically.", "Warning", MessageBoxButton.OK);
             App.SendEmail("", "Colorified Picture", body);
         }
 

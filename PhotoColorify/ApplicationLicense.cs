@@ -5,8 +5,8 @@ namespace Colorify
 {
     public class ApplicationLicense
     {
-        public static string AD_KEY = "COLORIFY_AD_KEYX";
-        public static string AD_MESSAGE = "Trial mode has all the funtionally of full version with ads though.";
+        public static string AD_KEY = "COLORIFY_AD_KEYXYZ";
+        public static string AD_MESSAGE = "The trial mode has all the funtionally of the full version with advertisements.";
 
         public static bool IsInTrialMode
         {
